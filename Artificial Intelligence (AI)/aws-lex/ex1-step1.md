@@ -30,6 +30,5 @@ You can test the bot by typing text into the test window, or, for compatible bro
    + The "Okay, your roses will be ready\.\.\." statement is the confirmation prompt that you configured\.
    + The last statement \("`FlowerType:roses...`"\) is just the slot data that is returned to the client, in this case, in the test window\. In the next exercise, you use a Lambda function to fulfill the intent, in which case you get a message indicating that the order is fulfilled\.
 
- **Next Step**
- 
+ **Next Step**  
 [Step 2: Create a Lambda Function \(Console\)](ex1-step2.md)
