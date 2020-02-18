@@ -1,29 +1,36 @@
-# Step 2: Create a Lambda Function<a name="ex1-sch-appt-create-lambda-function"></a>
+# Step 2: Create an Amazon Lex Bot
 
-In this section, you create a Lambda function using a blueprint \(lex\-make\-appointment\-python\) that is provided in the Lambda console\. You also test the Lambda function by invoking it using sample Amazon Lex event data that is provided by the console\.
+In this section, you create an Amazon Lex bot \(BookTrip\)\. 
 
-1. Sign in to the AWS Management Console and open the AWS Lambda console at [https://console\.aws\.amazon\.com/lambda/](https://console.aws.amazon.com/lambda/)\.
+1. Sign in to the AWS Management Console and open the Amazon Lex console at [https://console\.aws\.amazon\.com/lex/](https://console.aws.amazon.com/lex/)\.
 
-1. Choose **Create a Lambda function**\.
+1. On the **Bots** page, choose **Create**\.
 
-1. For **Select blueprint**, type **lex** to find the blueprint, and then choose the **lex\-make\-appointment\-python** blueprint\.
+1. On the **Create your Lex bot** page, 
+   + Choose **BookTrip** blueprint\.
+   + Leave the default bot name \(BookTrip\)\.
 
-1. Configure the Lambda function as follows, and then choose **Create Function**\.
-   + Type the Lambda function name \(`MakeAppointmentCodeHook`\)\.
-   + For the role, choose **Create a new role from template\(s\)**, and then type a role name\.
-   + Leave other default values\.
+1. Choose **Create**\. The console sends a series of requests to Amazon Lex to create the bot\. Note the following:
 
-1. Test the Lambda function\.
+1. The console shows the BookTrip bot\. On the **Editor** tab, review the details of the preconfigured intents \(BookCar and BookHotel\)\.
 
-   1. Choose **Select a test event, Configure test events**\.
-   
-   1. Choose **Amazon Lex Make Appointment** from the **Event template** list. Give the test event a name (`LexMakeAppointmentTest`).
-   
-   1. Choose **Create**.
+1. Test the bot in the test window\. Use the following to engage in a test conversation with your bot:   
+![](../images/book-trip-no-lambda-10.png)
 
-   1. Choose **Test** to test the code hook.
+   From the initial user input \("Book a hotel"\), Amazon Lex infers the intent \(BookHotel\)\. The bot then uses the prompts preconfigured in this intent to elicit slot data from the user\. After user provide all of the slot data, Amazon Lex returns a response back to the client with a message that includes all the user input as a message\. The client displays the message in the response as shown\. 
 
-   1. Verify that the Lambda function successfully executed\. The response in this case matches the Amazon Lex response model\.
+   ```
+   CheckInDate:2016-12-18 Location:Chicago Nights:5 RoomType:queen
+   ```
+
+   Now you continue the conversation and try to book a car\.   
+![](../images/book-trip-no-lambda-20.png)
+
+   Note that, 
+   + There is no user data validation at this time\. For example, you can provide any city to book a hotel\.
+   + You are providing some of the same information again \(destination, pick\-up city, pick\-up date, and return date\) to book a car\. In a dynamic conversation, your bot should initialize some of this information based on prior input user provided for booking hotel\. 
+
+   In this next section, you create a Lambda function to do some of the user data validation, and initialization using cross\-intent information sharing via session attributes\. Then you update the intent configuration by adding the Lambda function as code hook to perform initialization/validation of user input and fulfill intent\.
 
 **Next Step**  
-[Step 3: Update the Intent: Configure a Code Hook](ex3-step3.md)
+[Step 3: Create a Lambda function](ex3-step3.md)
