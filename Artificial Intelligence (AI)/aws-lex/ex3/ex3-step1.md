@@ -1,46 +1,67 @@
-# Step 1: Create an Amazon Lex Bot
+# Step 1: Review the Blueprints Used in this Exercise
 
-In this section, you create an Amazon Lex bot using the ScheduleAppointment blueprint, which is provided in the Amazon Lex console\.
+**Topics**
++ [Overview of the Bot Blueprint \(BookTrip\)](#ex-book-trip-bp-summary-bot)
++ [Overview of the Lambda Function Blueprint \(lex\-book\-trip\-python\)](#ex-book-trip-summary-lambda)
 
-1. Sign in to the AWS Management Console and open the Amazon Lex console at [https://console\.aws\.amazon\.com/lex/](https://console.aws.amazon.com/lex/)\.
+## Overview of the Bot Blueprint \(BookTrip\)<a name="ex-book-trip-bp-summary-bot"></a>
 
-1. On the **Bots** page, choose **Create**\.
+The blueprint \(**BookTrip**\) you use to create a bot provides the following preconfiguration:
++ **Slot types** – Two custom slot types:
+  +  `RoomTypes` with enumeration values: `king`, `queen`, and `deluxe`, for use in the `BookHotel` intent\.
+  +  `CarTypes` with enumeration values: `economy`, `standard`, `midsize`, `full size`, `luxury`, and `minivan`, for use in the `BookCar` intent\.
 
-1. On the **Create your bot** page, do the following:
-   + Choose the **ScheduleAppointment** blueprint\.
-   + Leave the default bot name \(ScheduleAppointment\)\.
-   + For **COPPA**, choose **No**\.
+     
++ **Intent 1 \(BookHotel\)** – It is preconfigured as follows:
+  + **Preconfigured slots** 
+    + `RoomType`, of the `RoomTypes` custom slot type
+    + `Location`, of the `AMAZON.US_CITY` built\-in slot type
+    + `CheckInDate`, of the `AMAZON.DATE` built\-in slot type
+    + `Nights`, of the `AMAZON.NUMBER` built\-in slot type
+  + **Preconfigured utterances** 
+    + "Book a hotel"
+    + "I want to make hotel reservations" 
+    + "Book a \{Nights\} stay in \{Location\}"
 
-1. Choose **Create**\.
+    If the user utters any of these, Amazon Lex determines that `BookHotel` is the intent and then prompts the user for slot data\.
+  + **Preconfigured prompts** 
+    + Prompt for the `Location` slot – "What city will you be staying in?"
+    + Prompt for the `CheckInDate` slot – "What day do you want to check in?"
+    + Prompt for the `Nights` slot – "How many nights will you be staying?" 
+    + Prompt for the `RoomType` slot – "What type of room would you like, queen, king, or deluxe?" 
+    + Confirmation statement – "Okay, I have you down for a \{Nights\} night stay in \{Location\} starting \{CheckInDate\}\. Shall I book the reservation?" 
+    + Denial – "Okay, I have cancelled your reservation in progress\."
 
-   This step saves and builds the bot\. The console sends the following requests to Amazon Lex during the build process: 
-   + Create a new version of the slot types \(from the $LATEST version\)\. For information about slot types defined in this bot blueprint, see [Overview of the Bot Blueprint \(ScheduleAppointment\)](ex1-sch-appt.md#ex1-sch-appt-bp-summary-bot)\.
-   + Create a version of the `MakeAppointment` intent \(from the $LATEST version\)\. In some cases, the console sends a request for the `update` API operation before creating a new version\. 
-   + Update the $LATEST version of the bot\. 
+       
++ **Intent 2 \(BookCar\)** – It is preconfigured as follows:
+  + **Preconfigured slots** 
+    + `PickUpCity`, of the `AMAZON.US_CITY` built\-in type
+    + `PickUpDate`, of the `AMAZON.DATE` built\-in type
+    + `ReturnDate`, of the `AMAZON.DATE` built\-in type
+    + `DriverAge`, of the `AMAZON.NUMBER` built\-in type
+    + `CarType`, of the `CarTypes` custom type
+  + **Preconfigured utterances** 
+    + "Book a car"
+    + "Reserve a car" 
+    + "Make a car reservation"
 
-     At this time, Amazon Lex builds a machine learning model for the bot\. When you test the bot in the console, the console uses the runtime API to send user input back to Amazon Lex\. Amazon Lex then uses the machine learning model to interpret the user input\. 
+    If the user utters any of these, Amazon Lex determines BookCar is the intent and then prompts the user for slot data\.
+  + **Preconfigured prompts**
+    + Prompt for the `PickUpCity` slot – "In what city do you need to rent a car?"
+    + Prompt for the `PickUpDate` slot – "What day do you want to start your rental?""
+    + Prompt for the `ReturnDate` slot – "What day do you want to return this car?"
+    + Prompt for the `DriverAge` slot – "How old is the driver for this rental?"
+    + Prompt for the `CarType` slot – "What type of car would you like to rent? Our most popular options are economy, midsize, and luxury"
+    + Confirmation statement – "Okay, I have you down for a \{CarType\} rental in \{PickUpCity\} from \{PickUpDate\} to \{ReturnDate\}\. Should I book the reservation?" 
+    + Denial – "Okay, I have cancelled your reservation in progress\."
 
-1. The console shows the ScheduleAppointment bot\. On the **Editor** tab, review the preconfigured intent \(`MakeAppointment`\) details\.
+## Overview of the Lambda Function Blueprint \(lex\-book\-trip\-python\)<a name="ex-book-trip-summary-lambda"></a>
 
-1. Test the bot in the test window\. Use the following screen shot to engage in a test conversation with your bot:   
-![](../images/appt-test-no-lambda.png)
+In addition to the bot blueprint, AWS Lambda provides a blueprint \(**lex\-book\-trip\-python**\) that you can use as a code hook with the bot blueprint\.
 
-   Note the following:
-   + From the initial user input \("Book an appointment"\), the bot infers the intent \(`MakeAppointment`\)\. 
-   + The bot then uses the configured prompts to get slot data from the user\. 
-   + The bot blueprint has the `MakeAppointment` intent configured with the following confirmation prompt:
+When you create a bot using the BookTrip blueprint, you update configuration of both the intents \(BookCar and BookHotel\) by adding this Lambda function as a code hook for both initialization/validation of user data input and fulfillment of the intents\.
 
-     ```
-     {Time} is available, should I go ahead and book your appointment?
-     ```
-
-     After the user provides all of the slot data, Amazon Lex returns a response to the client with a confirmation prompt as the message\. The client displays the message for the user:
-
-     ```
-     16:00 is available, should I go ahead and book your appointment? 
-     ```
-
-   Notice that the bot accepts any appointment date and time values because you don't have any code to initialize or validate the user data\. In the next section, you add a Lambda function to do this\. 
+This Lambda function code provided showcases dynamic conversation using previously known information \(persisted in session attributes\) about a user to initialize slot values for an intent\.
 
 **Next Step**  
-[Step 2: Create a Lambda Function](ex3-step2.md)
+[Step 2: Create an Amazon Lex Bot](ex3-step2.md)
