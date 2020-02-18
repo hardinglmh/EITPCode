@@ -17,4 +17,5 @@ Each utterance that you add provides Amazon Lex with more information about how 
 ![\[The intent editor recognizes the new utterance.\]](http://docs.aws.amazon.com/lex/latest/dg/images/gs1-140.png)
 
 **Next Step**
+
 [Step 5: Clean Up \(Console\)](ex1-step5.md)
