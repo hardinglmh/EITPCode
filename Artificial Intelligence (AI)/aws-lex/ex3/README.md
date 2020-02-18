@@ -19,11 +19,13 @@ In addition to the button shown in the preceding example, you can also include i
 In this exercise, you do the following:
 + Create and test a bot \(using the ScheduleAppointment blueprint\)\. For this exercise, you use a bot blueprint to quickly set up and test the bot\. For a list of available blueprints, see [Amazon Lex and AWS Lambda Blueprints](lex-lambda-blueprints.md)\.This bot is preconfigured with one intent \(`MakeAppointment`\)\. 
 
-  ?
 + Create and test a Lambda function \(using the lex\-make\-appointment\-python blueprint provided by Lambda\)\. You configure the `MakeAppointment` intent to use this Lambda function as a code hook to perform initialization, validation, and fulfillment tasks\.
+
 **Note**  
 The provided example Lambda function showcases a dynamic conversation based on the mocked\-up availability of a dentist appointment\. In a real application, you might use a real calendar to set an appointment\.
+
 + Update the `MakeAppointment` intent configuration to use the Lambda function as a code hook\. Then, test the end\-to\-end experience\. 
+
 + Publish the schedule appointment bot to Facebook Messenger so you can see the response cards in action \(the client in the Amazon Lex console currently does not support response cards\)\.
 
 The following sections provide summary information about the blueprints you use in this exercise\.
@@ -40,26 +42,26 @@ The following sections provide summary information about the blueprints you use 
 ## Overview of the Bot Blueprint \(ScheduleAppointment\)<a name="ex1-sch-appt-bp-summary-bot"></a>
 
 The ScheduleAppointment blueprint that you use to create a bot for this exercise is preconfigured with the following:
-+ **Slot types** ¡V One custom slot type called `AppointmentTypeValue`, with the enumeration values `root canal`, `cleaning`, and `whitening`\.
-+ **Intent** ¡V One intent \(`MakeAppointment`\), which is preconfigured as follows:
-  + **Slots** ¡V The intent is configured with the following slots:
++ **Slot types** Â¡V One custom slot type called `AppointmentTypeValue`, with the enumeration values `root canal`, `cleaning`, and `whitening`\.
++ **Intent** Â¡V One intent \(`MakeAppointment`\), which is preconfigured as follows:
+  + **Slots** Â¡V The intent is configured with the following slots:
     + Slot `AppointmentType`, of the `AppointmentTypes` custom type\.
     + Slot `Date`, of the `AMAZON.DATE` built\-in type\.
     + Slot `Time`, of the `AMAZON.TIME` built\-in type\.
-  + **Utterances** ¡V The intent is preconfigured with the following utterances: 
+  + **Utterances** Â¡V The intent is preconfigured with the following utterances: 
     + "I would like to book an appointment"
     + "Book an appointment" 
     + "Book a \{AppointmentType\}"
 
     If the user utters any of these, Amazon Lex determines that `MakeAppointment` is the intent, and then uses the prompts to elicit slot data\.
-  + **Prompts** ¡V The intent is preconfigured with the following prompts:
-    + Prompt for the `AppointmentType` slot ¡V "What type of appointment would you like to schedule?"
-    + Prompt for the `Date` slot ¡V "When should I schedule your \{AppointmentType\}?"
-    + Prompt for the `Time` slot ¡V "At what time do you want to schedule the \{AppointmentType\}?" and 
+  + **Prompts** Â¡V The intent is preconfigured with the following prompts:
+    + Prompt for the `AppointmentType` slot Â¡V "What type of appointment would you like to schedule?"
+    + Prompt for the `Date` slot Â¡V "When should I schedule your \{AppointmentType\}?"
+    + Prompt for the `Time` slot Â¡V "At what time do you want to schedule the \{AppointmentType\}?" and 
 
       "At what time on \{Date\}?"
-    + Confirmation prompt ¡V "\{Time\} is available, should I go ahead and book your appointment?" 
-    + Cancel message¡V "Okay, I will not schedule an appointment\."
+    + Confirmation prompt Â¡V "\{Time\} is available, should I go ahead and book your appointment?" 
+    + Cancel messageÂ¡V "Okay, I will not schedule an appointment\."
 
 ## Overview of the Lambda Function Blueprint \(lex\-make\-appointment\-python\)<a name="ex1-sch-appt-summary-lambda"></a>
 
