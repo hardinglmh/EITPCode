@@ -1,4 +1,4 @@
-# Step 5: Clean Up
+# Step 5 \(Optional\): Clean Up
 
 Now, delete the resources that you created and clean up your account\.
 
