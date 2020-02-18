@@ -35,7 +35,7 @@ Now, create the `OrderPizza` intent , an action that the user wants to perform, 
 
 **To create an intent**
 
-1. In the Amazon Lex console, choose the plus sign \(\+\) next to **Intents**, and then choose **Create new intent**\.
+1. In the Amazon Lex console, choose the plus sign \(\+\) next to **Intents**, and then choose **Create intent**\.
 
 1. In the **Create intent** dialog box, type the name of the intent \(`OrderPizza`\), and then choose **Add**\.
 
@@ -48,7 +48,7 @@ Create the slot types, or parameter values, that the `OrderPizza` intent uses\.
 
 **To create slot types**
 
-1. <a name="slotTypeStart"></a>In the left menu, choose the plus sign \(\+\) next to **Slot types**\.
+1. <a name="slotTypeStart"></a>In the left menu, choose the plus sign \(\+\) next to **Slot types**\, and then choose **Create slot type**\.
 
 1. In the **Add slot type** dialog box, add the following: 
    + **Slot type name** – Crusts
