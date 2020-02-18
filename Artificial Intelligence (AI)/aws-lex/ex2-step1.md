@@ -1,4 +1,4 @@
-# Create the Bot<a name="gs2-create-bot-create"></a>
+# Step 1: Create the Bot<a name="ex2-step2"></a>
 
 Create the `PizzaOrderingBot` bot with the minimum information needed\. You add an intent, an action that the user wants to perform, for the bot later\.
 
@@ -25,4 +25,4 @@ Create the `PizzaOrderingBot` bot with the minimum information needed\. You add 
       + **Build** and **Publish** are bot\-level activities\. After you configure the entire bot, you'll learn more about these activities\.
 
 **Next Step**  
-[Create an Intent](ex2-step2.md)
+[Step 2 : Create an Intent](ex2-step2.md)
