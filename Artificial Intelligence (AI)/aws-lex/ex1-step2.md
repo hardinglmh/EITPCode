@@ -31,7 +31,8 @@ You return to the Amazon Lex console and add the Lambda function as the code hoo
 
    1. Choose **Test** to test the code hook\.
 
-   1. Verify that the Lambda function successfully executed\. The response in this case matches the Amazon Lex response model\.
+   1. Verify that the Lambda function successfully executed\.
 
 **Next Step**
+
 [Step 3: Add the Lambda Function as Code Hook \(Console\)](ex1-step3.md)
