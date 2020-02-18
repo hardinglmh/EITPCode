@@ -17,7 +17,7 @@ In this section, you create a Lambda function using a blueprint \(lex\-make\-app
 
    1. Choose **Select a test event, Configure test events**\.
    
-   1. Choose **Amazon Lex Make Appointment** from the **Event template** list. This sample event matches the Amazon Lex request/response model (see Using Lambda Functions). Give the test event a name (LexMakeAppointmentTest).
+   1. Choose **Amazon Lex Make Appointment** from the **Event template** list. Give the test event a name (`LexMakeAppointmentTest`).
    
    1. Choose **Create**.
 
