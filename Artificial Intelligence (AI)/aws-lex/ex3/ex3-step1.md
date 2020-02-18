@@ -57,7 +57,7 @@ The blueprint \(**BookTrip**\) you use to create a bot provides the following pr
 
 ## Overview of the Lambda Function Blueprint \(lex\-book\-trip\-python\)<a name="ex-book-trip-summary-lambda"></a>
 
-In addition to the bot blueprint, AWS Lambda provides a blueprint \(**lex\-book\-trip\-python**\) that you can use as a code hook with the bot blueprint\.
+In addition to the bot blueprint, AWS Lambda provides a blueprint \(**[lex\-book\-trip\-python](../source/lex-book-trip-python.py)**\) that you can use as a code hook with the bot blueprint\.
 
 When you create a bot using the BookTrip blueprint, you update configuration of both the intents \(BookCar and BookHotel\) by adding this Lambda function as a code hook for both initialization/validation of user data input and fulfillment of the intents\.
 
