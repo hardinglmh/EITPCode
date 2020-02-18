@@ -1,6 +1,6 @@
 # Exercise 2: Create a Custom Amazon Lex Bot<a name="getting-started-ex2"></a>
 
-In this exercise, you use the Amazon Lex console to create a custom bot that orders pizza \(`OrderPizzaBot`\)\. You configure the bot by adding a custom intent \(`OrderPizza`\), defining custom slot types, and defining the slots required to fulfill a pizza order \(pizza crust, size, and so on\)\. For more information about slot types and slots, see [Amazon Lex: How It Works](how-it-works.md)\.
+In this exercise, you use the Amazon Lex console to create a custom bot that orders pizza \(`OrderPizzaBot`\)\. You configure the bot by adding a custom intent \(`OrderPizza`\), defining custom slot types, and defining the slots required to fulfill a pizza order \(pizza crust, size, and so on\)\.
 
 **Topics**
 + [Step 1: Create a Lambda Function](ex2-step1.md)
