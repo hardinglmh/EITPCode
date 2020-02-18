@@ -35,7 +35,7 @@ In this section, you update the configuration of the OrderFlowers intent to use 
    1. Test the bot\.
 
       You are now ready to converse with Amazon Lex as follows\. To test the validation portion, choose time 6 PM, and your Lambda function returns a response \("Our business hours are from ten a.m. to five p.m.\."\), and prompts you again\. After you provide all the valid slot data, the Lambda function fulfills the order\.
-![\[\]](./images/OrderFlowers-FullLambda.png)
+![\[\]](../images/OrderFlowers-FullLambda.png)
 
 **Next Step**  
 [Step 4: Update the Intent Configuration to Add an Utterance](ex1-step4.md)
