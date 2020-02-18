@@ -13,7 +13,6 @@ You return to the Amazon Lex console and add the Lambda function as the code hoo
 1. On the **Create function** page, choose **Use a blueprint**\. Type **lex\-** in the filter text box and then press `Enter` to find the blueprint, choose the `lex-order-flowers-python` blueprint\.
 
    Lambda function blueprints are provided in both Node\.js and Python\. For this exercise, use the Python\-based blueprint\.
-   Please check [here](./source/ex1-step2.py) to get the source code.
 
 1. On the **Basic information** page, do the following\.
    + Type a Lambda function name \(`OrderFlowersCodeHook`\)\.
@@ -34,6 +33,5 @@ You return to the Amazon Lex console and add the Lambda function as the code hoo
 
    1. Verify that the Lambda function successfully executed\.
 
-**Next Step**
-
+**Next Step**  
 [Step 3: Add the Lambda Function as Code Hook \(Console\)](ex1-step3.md)
