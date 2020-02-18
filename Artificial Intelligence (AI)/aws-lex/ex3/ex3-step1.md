@@ -23,7 +23,7 @@ In this section, you create an Amazon Lex bot using the ScheduleAppointment blue
 1. The console shows the ScheduleAppointment bot\. On the **Editor** tab, review the preconfigured intent \(`MakeAppointment`\) details\.
 
 1. Test the bot in the test window\. Use the following screen shot to engage in a test conversation with your bot:   
-![]](../images/appt-test-no-lambda.png)
+![](../images/appt-test-no-lambda.png)
 
    Note the following:
    + From the initial user input \("Book an appointment"\), the bot infers the intent \(`MakeAppointment`\)\. 
