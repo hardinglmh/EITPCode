@@ -1,5 +1,7 @@
 # Step 2: Create a Bot<a name="ex2-step2"></a>
 
+## Create a Bot
+
 Create the `PizzaOrderingBot` bot with the minimum information needed\. You add an intent, an action that the user wants to perform, for the bot later\.
 
 **To create the bot**
@@ -25,6 +27,8 @@ Create the `PizzaOrderingBot` bot with the minimum information needed\. You add 
       + **Build** and **Publish** are bot\-level activities\. After you configure the entire bot, you'll learn more about these activities\.
 
 
+## Create an intent
+
 Now, create the `OrderPizza` intent , an action that the user wants to perform, with the minimum information needed\. You add slot types for the intent and then configure the intent later\.
 
 **To create an intent**
@@ -35,7 +39,8 @@ Now, create the `OrderPizza` intent , an action that the user wants to perform, 
 
 The console sends a request to Amazon Lex to create the `OrderPizza` intent\. In this example you create slots for the intent after you create slot types\.
 
-# Create Slot Types<a name="gs2-create-bot-slot-types"></a>
+
+## Create Slot Types<a name="gs2-create-bot-slot-types"></a>
 
 Create the slot types, or parameter values, that the `OrderPizza` intent uses\.
 
@@ -59,7 +64,8 @@ Create the slot types, or parameter values, that the `OrderPizza` intent uses\.
 1. Repeat [Step 1](#slotTypeStart) through [Step 4](#slotTypeFinish) using the values in the following table:    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lex/latest/dg/gs2-create-bot-slot-types.html)
 
-# Configure the Intent<a name="gs2-create-bot-configure-intent"></a>
+
+## Configure the Intent<a name="gs2-create-bot-configure-intent"></a>
 
 Configure the `OrderPizza` intent to fulfill a user's request to order a pizza\.
 
@@ -85,7 +91,8 @@ Configure the `OrderPizza` intent to fulfill a user's request to order a pizza\.
   The intent should look like the following:  
 ![\[The intent editor.\]](http://docs.aws.amazon.com/lex/latest/dg/images/gs1-70c.png)
 
-# Configure the Bot<a name="gs2-create-bot-configure-bot"></a>
+
+## Configure the Bot<a name="gs2-create-bot-configure-bot"></a>
 
 Configure error handling for the `PizzaOrderingBot` bot\.
 
