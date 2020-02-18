@@ -38,4 +38,4 @@ In this section, you update the configuration of the OrderFlowers intent to use 
 ![\[\]](../images/OrderFlowers-FullLambda.png)
 
 **Next Step**  
-[Step 4: Update the Intent Configuration to Add an Utterance](ex1-step4.md)
+[Step 4 \(Optional\: Update the Intent Configuration to Add an Utterance](ex1-step4.md)
