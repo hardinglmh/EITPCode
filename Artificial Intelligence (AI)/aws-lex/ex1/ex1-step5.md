@@ -1,30 +1,36 @@
-# Step 5 \(Optional\): Clean Up
+# Step 5 \(Optional\): Updating Utterances
 
-Now, delete the resources that you created and clean up your account\.
+In this exercise, you add additional utterances to those you created in Step 1\. You use the **Monitoring** tab in the Amazon Lex console to view utterances that your bot did not recognize\. To improve the experience for your users, you add those utterances to the bot\. 
 
-You can delete only resources that are not in use\. In general, you should delete resources in the following order:
-+ Delete bots to free up intent resources\.
-+ Delete intents to free up slot type resources\.
-+ Delete slot types last\.
+**Note**  
+Utterance statistics are generated once a day\. You can see the utterance that was not recognized, how many times it was heard, and the last date and time that the utterance was heard\. It can take up to 24 hours for missed utterances to appear in the console\.
 
-**To clean up your account**
+You can see utterances for different versions of your bot\. To change the version of your bot that you are seeing utterances for, choose a different version from the drop\-down next to the bot name\.
+
+**To view and add missed utterances to a bot:**
+
+1. Follow the step 1 to create and test an `OrderFlowers` bot\. For instructions, see [Step 1: Create an Amazon Lex Bot](ex1-step1.md)\.
+
+1. Test the bot by typing the following utterances in the **Test Bot** window\. Type each utterance several times\. The example bot doesn't recognize the following utterances:
+   + Order flowers
+   + Get me flowers
+   + Please order flowers
+   + Get me some flowers
+
+1. Wait for Amazon Lex to gather usage data about the missed utterances\. Utterance data is generated once per day, generally overnight\.
 
 1. Sign in to the AWS Management Console and open the Amazon Lex console at [https://console\.aws\.amazon\.com/lex/](https://console.aws.amazon.com/lex/)\.
 
-1. From the list of bots, choose the check box next to **OrderFlowers**\.
+1. Choose the `OrderFlowers` bot\.
 
-1. To delete the bot, choose **Delete**, and then choose **Continue** in the confirmation dialog box\.
+1. Choose the **Monitoring** tab, and then choose **Utterances** from the left menu and then choose the **Missed** button\. The pane shows a maximum of 100 missed utterances\.  
+![\[The Utterances pane showing missed utterances.\]](../images/utterances-10.png)
 
-1. In the left pane, choose **Intents**\.
+1. To choose the missed utterances that you want to add to the bot, select the check box next to them\. To add the utterance to the `$LATEST` version of the intent, choose the down arrow next to the **Add utterance to intent** dropdown, and then choose the intent\.
 
-1. In the list of intents, choose **OrderFlowersIntent**\.
+1. To rebuild your bot, choose **Build** and then **Build** again to re\-build your bot\.
 
-1. To delete the intent, choose **Delete**, and then choose **Continue** in the confirmation dialog box\.
+1. To verify that your bot recognizes the new utterances, use the **Test Bot** pane\.
 
-1. In the left pane, choose **Slot types**\.
-
-1. In the list of slot types, choose **Flowers**\.
-
-1. To delete the slot type, choose **Delete**, and then choose **Continue** in the confirmation dialog box\.
-
-You have removed all of the Amazon Lex resources that you created and cleaned up your account\. If desired, you can use the [Lambda console](https://console.aws.amazon.com/lambda) to delete the Lambda function used in this exercise\.
+**Next Step**  
+[Step 6 \(Optional\): Clean Up](ex1-step6.md)
