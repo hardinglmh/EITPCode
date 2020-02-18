@@ -6,7 +6,7 @@ In this exercise, you do the following:
   For this exercise, you use the **OrderFlowers** blueprint\.
 
    
-+ Create an AWS Lambda function and test it in the Lambda console\. While processing a request, your bot calls this Lambda function\. For this exercise, you use a Lambda blueprint \(**lex\-order\-flowers\-python**\) provided in the AWS Lambda console to create your Lambda function\. The blueprint code illustrates how you can use the same Lambda function to perform initialization and validation, and to fulfill the `OrderFlowers` intent\. 
++ Create an AWS Lambda function and test it in the Lambda console\. While processing a request, your bot calls this Lambda function\. For this exercise, you use a Lambda blueprint \(**[lex\-order\-flowers\-python](./source/lex-order-flowers-python.py)**\) provided in the AWS Lambda console to create your Lambda function\. The blueprint code illustrates how you can use the same Lambda function to perform initialization and validation, and to fulfill the `OrderFlowers` intent\. 
 
    
 + Update the bot to add the Lambda function as the code hook to fulfill the intent\. Test the end\-to\-end experience\.
