@@ -2,7 +2,7 @@
 This is a collection of Javascript-based (Node.js) and Python-based sample code that interact with the Amazon Lex which is an AWS service for building conversational interfaces into applications using voice and text.
 
 ##  Project Description
-This toolkit contains sample programs based on Amazon Lex SDK, Node.js 12.x and Python 2.7, including ordering flowers, ordering a pizza, booking a hotel and other coming projects.
+This toolkit contains sample programs based on Amazon Lex SDK, Node.js and Python 2.7, including ordering flowers, ordering a pizza, booking a hotel and other coming projects.
 
 ### [Exercise 1 : Order Flowers](ex1-step1.md)
 For this exercise, create a bot for ordering flowers by Web Console, called OrderFlowersBot\.
