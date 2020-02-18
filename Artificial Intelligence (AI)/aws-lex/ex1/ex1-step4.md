@@ -1,4 +1,4 @@
-# Step 4: Update the Intent Configuration to Add an Utterance
+# Step 4 \(Optional\): Update the Intent Configuration to Add an Utterance
 
  The `OrderFlowers` bot is configured with only two utterances\. This provides limited information for Amazon Lex to build a machine learning model that recognizes and responds to the user's intent\. Try typing "I want to order flowers" in the test window\. Amazon Lex doesn’t recognize the text, and responds with "I didn't understand you, what would you like to do?" You can improve the machine learning model by adding more utterances\.
 
@@ -17,4 +17,4 @@ Each utterance that you add provides Amazon Lex with more information about how 
 ![\[The intent editor recognizes the new utterance.\]](../images/gs1-140.png)
 
 **Next Step**  
-[Step 5: Clean Up](ex1-step5.md)
+[Step 5 \(Optional\): Clean Up](ex1-step5.md)
