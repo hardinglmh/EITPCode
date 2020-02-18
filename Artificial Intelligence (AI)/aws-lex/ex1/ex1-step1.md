@@ -21,7 +21,7 @@ To create an Amazon Lex bot
 You can test the bot by typing text into the test window, or, for compatible browsers, by choosing the microphone button in the test window and speaking\.
 
    Use the following example text to engage in conversation with the bot to order flowers:
-![\[\]](./images/OrderFlowers-NoLambda.png)
+![\[\]](../images/OrderFlowers-NoLambda.png)
 
    From this input, the bot infers the `OrderFlowers` intent and prompts for slot data\. When you provide all of the required slot data, the bot fulfills the intent \(`OrderFlowers`\) by returning all of the information to the client application \(in this case, the console\)\. The console shows the information in the test window\.
 
