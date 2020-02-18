@@ -33,4 +33,4 @@ You can see utterances for different versions of your bot\. To change the versio
 1. To verify that your bot recognizes the new utterances, use the **Test Bot** pane\.
 
 **Next Step**  
-[Step 6 \(Optional\): Clean Up](ex1-step6.md)
+[Step 6 \(Optional\): Using a Response Card](ex1-step6.md)

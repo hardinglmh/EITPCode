@@ -1,33 +1,40 @@
-# Step 6 \(Optional\): Clean Up
+# Step 6 \(Optional\): Using a Response Card
 
-Now, delete the resources that you created and clean up your account\.
+In this exercise, you extend the step 1 by adding a response card\. You create a bot that supports the OrderFlowers intent, and then update the intent by adding a response card for the `FlowerType` slot\. In addition to the following prompt for the `FlowerType` slot, the user can choose the type of flowers from the response card:
 
-You can delete only resources that are not in use\. In general, you should delete resources in the following order:
-+ Delete bots to free up intent resources\.
-+ Delete intents to free up slot type resources\.
-+ Delete slot types last\.
+```
+What type of flowers would you like to order?
+```
 
-**To clean up your account**
+The following is the response card:
 
-1. Sign in to the AWS Management Console and open the Amazon Lex console at [https://console\.aws\.amazon\.com/lex/](https://console.aws.amazon.com/lex/)\.
+![\[\]](../images/resp-card-example-10a.png)
 
-1. From the list of bots, choose the check box next to **OrderFlowers**\.
+The bot user can either type the text or choose from the list of flower types\. This response card is configured with an image, which appears in the client as shown\.
 
-1. To delete the bot, choose **Delete**, and then choose **Continue** in the confirmation dialog box\.
+To create and test a bot with a response card:
 
-1. In the left pane, choose **Intents**\.
+1. Follow the step 1 to create and test an OrderFlowers bot\. You must complete steps 1, 2, and 3\. You don't need to add a Lambda function to test the response card\. For instructions, see [Step 1: Create an Amazon Lex Bot ](ex1-step1.md)\.
 
-1. In the list of intents, choose **OrderFlowersIntent**\.
+1. Update the bot by adding the response card, and then publish a version\. When you publish a version, specify an alias \(BETA\) to point to it\. 
 
-1. To delete the intent, choose **Delete**, and then choose **Continue** in the confirmation dialog box\.
+   1. In the Amazon Lex console, choose your bot\.
 
-1. In the left pane, choose **Slot types**\.
+   1. Choose the `OrderFlowers` intent\. 
 
-1. In the list of slot types, choose **Flowers**\.
+   1. Choose the settings gear icon next to the "What type of flowers" **Prompt** to configure a response card for the `FlowerType`\.  
+![\[\]](../images/resp-card-example-30.png)
 
-1. To delete the slot type, choose **Delete**, and then choose **Continue** in the confirmation dialog box\.
+   1. Give the card a title and configure three buttons as shown in the following screen shot\. You can optionally add an image to the response card, provided you have an image URL\. If you are deploying your bot using Twilio SMS, you must provide an image URL\.  
+![\[\]](../images/resp-card-example-20a.png)
 
-You have removed all of the Amazon Lex resources that you created and cleaned up your account\. If desired, you can use the [Lambda console](https://console.aws.amazon.com/lambda) to delete the Lambda function used in this exercise\.
+   1. Choose **Save** to save the response card\.
 
+   1. Choose **Save intent** to save the intent configuration\.
+
+   1. To build the bot, choose **Build**\.
+
+   1. To publish a bot version, choose **Publish**\. Specify BETA as an alias that points to the bot version\.
+   
 **Next Step**  
-[Step 7 \(Optional\): Using a Response Card](ex1-step7.md)
+[Step 7 \(Optional\): Clean Up](ex1-step7.md)
