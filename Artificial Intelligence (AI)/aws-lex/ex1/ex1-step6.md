@@ -1,6 +1,6 @@
 # Step 6 \(Optional\): Using a Response Card
 
-In this exercise, you extend the step 1 by adding a response card\. You create a bot that supports the OrderFlowers intent, and then update the intent by adding a response card for the `FlowerType` slot\. In addition to the following prompt for the `FlowerType` slot, the user can choose the type of flowers from the response card:
+In this section, you extend the step 1 by adding a response card\. You create a bot that supports the OrderFlowers intent, and then update the intent by adding a response card for the `FlowerType` slot\. In addition to the following prompt for the `FlowerType` slot, the user can choose the type of flowers from the response card:
 
 ```
 What type of flowers would you like to order?
