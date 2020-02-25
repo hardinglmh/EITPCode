@@ -14,7 +14,7 @@ The bot user can either type the text or choose from the list of flower types\. 
 
 To create and test a bot with a response card:
 
-1. Follow the step 1 to create and test an OrderFlowers bot\. You must complete steps 1, 2, and 3\. You don't need to add a Lambda function to test the response card\. For instructions, see [Step 1: Create an Amazon Lex Bot ](ex1-step1.md)\.
+1. Follow the step 1 to create and test an OrderFlowers bot\. You must complete steps 1, 2, and 3\. You don't need to add a Lambda function to test the response card\. For instructions, see [Step 1: Create an Amazon Lex Bot](ex1-step1.md)\.
 
 1. Update the bot by adding the response card, and then publish a version\. When you publish a version, specify an alias \(BETA\) to point to it\. 
 
