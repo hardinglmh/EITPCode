@@ -1,6 +1,6 @@
 # Step 5 \(Optional\): Updating Utterances
 
-In this exercise, you add additional utterances to those you created in Step 1\. You use the **Monitoring** tab in the Amazon Lex console to view utterances that your bot did not recognize\. To improve the experience for your users, you add those utterances to the bot\. 
+In this section, you add additional utterances to those you created in Step 1\. You use the **Monitoring** tab in the Amazon Lex console to view utterances that your bot did not recognize\. To improve the experience for your users, you add those utterances to the bot\. 
 
 **Note**  
 Utterance statistics are generated once a day\. You can see the utterance that was not recognized, how many times it was heard, and the last date and time that the utterance was heard\. It can take up to 24 hours for missed utterances to appear in the console\.
