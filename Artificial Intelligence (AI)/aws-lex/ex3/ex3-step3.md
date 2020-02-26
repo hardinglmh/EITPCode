@@ -8,7 +8,7 @@ This Lambda function is written in Python.
 
 1. Choose **Create function**.
 
-1. Choose **Use a blueprint**. Type **lex** to find the blueprint, choose the [`lex-book-trip-python`](../source/lex-book-trip-python.js) blueprint.
+1. Choose **Use a blueprint**. Type **lex** to find the blueprint, choose the `[lex-book-trip-python](../source/lex-book-trip-python.js)` blueprint.
 
 1. Choose **Configure** the Lambda function as follows and then choose **Create Function**.
    + Type a Lambda function name (`BookTripCodeHook`).
@@ -19,13 +19,15 @@ This Lambda function is written in Python.
 
    1. Choose **Configure test event** from the **Select a test event** drop down.
 
-   1. Choose **Amazon Lex Book Hotel** from the **Sample event template** list. 
+   1. Choose **Amazon Lex Book Hotel** from the **Event template** list.
 
-   1. Choose **Save and test**.
+   1. In the **Event name** field, enter a name for the event ([`BookHotelTest`](../source/lex-book-hotel-test.json)).
+
+   1. Choose **Create**.
 
    1. Verify that the Lambda function successfully executed. The response in this case matches the Amazon Lex response model.
 
-   1. Repeat the step. This time you choose the **Amazon Lex Book Car** from the **Sample event template** list. The Lambda function processes the car reservation.
+   1. Repeat the step. This time you choose the **Amazon Lex Book Car** from the **Event template** list, and named [**BookCarTest**](../source/lex-book-car-test.json). The Lambda function processes the car reservation.
 
 **Next Step**  
 [Step 4: Add the Lambda Function as a Code Hook](ex3-step4.md)
