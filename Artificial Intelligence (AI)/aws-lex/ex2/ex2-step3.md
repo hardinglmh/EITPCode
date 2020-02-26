@@ -31,7 +31,7 @@ Make sure the bot works, by building and testing it.
 
    The Lambda function returns a message ("Okay, I have ordered your ...") to Amazon Lex, which Amazon Lex returns to you..
 
-## Inspecting the Response<a name="gs2-inspect-pane"></a>
+## Inspecting the Response
 
 Underneath the chat window is a pane that enables you to inspect the response from Amazon Lex. The pane provides comprehensive information about the state of your bot that changes as you interact with your bot.
 
