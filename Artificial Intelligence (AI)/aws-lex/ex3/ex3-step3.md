@@ -8,7 +8,7 @@ This Lambda function is written in Python.
 
 1. Choose **Create function**.
 
-1. Choose **Use a blueprint**. Type **lex** to find the blueprint, choose the [`lex-book-trip-python]`](../source/lex-book-trip-python.js) blueprint.
+1. Choose **Use a blueprint**. Type **lex** to find the blueprint, choose the [`lex-book-trip-python`](../source/lex-book-trip-python.js) blueprint.
 
 1. Choose **Configure** the Lambda function as follows and then choose **Create Function**.
    + Type a Lambda function name (`BookTripCodeHook`).
