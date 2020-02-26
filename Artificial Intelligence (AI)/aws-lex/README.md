@@ -20,4 +20,4 @@ Below examples are designed for students to get familiar with Amazon Lex, and we
 ### Reference  
 For more information about Amazon Lex, please feel free to visit the following links:  
 https://aws.amazon.com/lex/  
-https://docs.aws.amazon.com/lex/index.htm
+https://docs.aws.amazon.com/lex/
