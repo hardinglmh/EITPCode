@@ -10,7 +10,7 @@ Amazon Lex provides API operations that you can integrate with your existing app
 + AWS SDK — When using the SDKs your requests to Amazon Lex are automatically signed and authenticated using the credentials that you provide. This is the recommended choice for building your applications.
 + AWS CLI — You can use the AWS CLI to access any Amazon Lex feature without having to write any code.
 
-Below examples are designed for users to get familiar with Amazon Lex, and we use AWS Console as the development tool.
+Below examples are designed for students to get familiar with Amazon Lex, and we use AWS Console as the development tool.
 
 ### Examples
 ### [1 : Create an Amazon Lex Bot Using a Blueprint (Order Flowers)](./ex1/README.md)
