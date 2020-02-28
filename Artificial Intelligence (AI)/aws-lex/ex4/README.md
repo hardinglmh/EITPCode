@@ -8,7 +8,7 @@ You have built and tested your bots in the previous exercises. It is time for yo
 1. Choose **Manage Identity Pool** for your first setup; otherwise, on the **Federated Identities** page, choose **Create new identity pool**.
 ![](../images/greetings_visitor_3.gif)
 
-1. Provide a pool name (`botpool`), choose **Enable access to unauthenticated identities**, and then choose **Create Pool**:
+1. Provide identity pool name (`botpool`), choose **Enable access to unauthenticated identities**, and then choose **Create Pool**:
 ![](../images/greetings_visitor_4.gif)
 
 1. Create the pool and the associated AWS Identity and Access Management (IAM) roles, you choose **Allow**. Then, you record the IAM role names so you can modify them:
@@ -33,14 +33,14 @@ You have built and tested your bots in the previous exercises. It is time for yo
 
 
 **Test your chatbot on the web**  
-Change the values of `region`, `IdentityPoolId`, `botName` in the [HTML file](../source/aws-lex-template.html) that you can use to test your bot.
+Download the [HTML file for BookTrip](../source/aws-lex-template.html) and run it in your browser. Change the values of `region`, `IdentityPoolId`, `botName` and placeholder of `wisdom` if you want to test your bots.
 
 ```
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>Amazon Lex for JavaScript - Sample Application</title>
+  <title>Amazon Lex for JavaScript - BookTrip</title>
   <script src="https://sdk.amazonaws.com/js/aws-sdk-2.149.0.min.js"></script>
   <style language="text/css">
     input#wisdom {
@@ -90,13 +90,14 @@ Change the values of `region`, `IdentityPoolId`, `botName` in the [HTML file](..
 </head>
 
 <body>
-  <h1 style="text-align:  left">Amazon Lex - Sample Application</h1>
+  <h1 style="text-align:  left">Amazon Lex - BookTrip</h1>
   <p style="width: 400px">
     This little chatbot shows how easy it is to incorporate
     <a href="https://aws.amazon.com/lex/" title="Amazon Lex (product)" target="_new">Amazon Lex</a> into your web pages.  Try it out.
   </p>
   <div id="conversation" style="width: 400px; height: 400px; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
   <form id="chatform" style="margin-top: 10px" onsubmit="return pushChat();">
+    // Sample utterance in placeholder
     <input type="text" id="wisdom" size="80" value="" placeholder="I need a hotel room">
   </form>
   <script type="text/javascript">
