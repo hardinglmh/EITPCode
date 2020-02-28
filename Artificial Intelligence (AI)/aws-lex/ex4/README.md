@@ -1,25 +1,39 @@
 # Exercise 4: Integrate Your Amazon Lex Bot with Static Web Page
 
-You have built and tested your bots in previous exercises. It is time for you to push this out to a static website, but you want to ensure it・s not left wide open. You know Amazon Cognito will let you manage permissions and users for mobile and web apps, so you start with an Amazon Cognito federated identity pool.
+You have built and tested your bots in the previous exercises. It is time for you to push this out to a static website, but you want to ensure it's not left wide open. You know Amazon Cognito will let you manage permissions and users for mobile and web apps, so you start with an Amazon Cognito federated identity pool.
 
 **Set up Amazon Cognito**
+1. Sign in to the AWS Management Console and open the AWS Cognito console at [https://console.aws.amazon.com/cognito/](https://console.aws.amazon.com/cognito/).
 
-1. From the Amazon Cognito console, you choose **Manage identity pool**, and then choose **Create new identity pool**.
+1. Choose **Manage Identity Pool** for your first setup; otherwise, on the **Federated Identities** page, choose **Create new identity pool**.
+![](../images/greetings_visitor_3.gif)
 
-1. You provide a pool name (botpool), choose Enable access to unauthenticated identities, and then choose **Create Pool**:
+1. Provide a pool name (`botpool`), choose **Enable access to unauthenticated identities**, and then choose **Create Pool**:
 ![](../images/greetings_visitor_4.gif)
 
-1. To create the pool and the associated AWS Identity and Access Management (IAM) roles, you choose **Allow**. Then, you record the IAM role names so you can modify them:
+1. Create the pool and the associated AWS Identity and Access Management (IAM) roles, you choose **Allow**. Then, you record the IAM role names so you can modify them:
 ![](../images/greetings_visitor_5.gif)
 
-1. Finally, you get the pool ID that you need for the JavaScript you will use to integrate the bot.
+1. On the **Sample code** page, choose **JavaScript** in platform, you get the **AWS Credentials** that you need for integrating the bot.
 ![](../images/greetings_visitor_6.gif)
 
-1. You modify the IAM roles to allow access to Amazon Lex. From the IAM console, you find the roles and change each of them to attach the AmazonLexRunBotsOnly and AmazonPollyReadOnlyAccess policies:
-![](../images/greetings_visitor_7.gif)
+1. Modify the IAM roles to allow access to Amazon Lex, open the AWS IAM console at [https://console.aws.amazon.com/iam/](https://console.aws.amazon.com/iam/).
 
-**Test your chatbot on the web**
-You quickly put together an [HTML file](../source/aws-lex-template.html) that you can use to test your bot. The pool ID is used here to establish an IAM session.
+1. Choose **Roles** under **Access Management**, search `botpool` to list the roles created before.
+![](../images/greetings_visitor_6a.gif)
+
+1. Choose **Cognito_botpoolUnauth_Role**, choose **Attach policies**.
+![](../images/greetings_visitor_6b.gif)
+
+1. Search **AmazonLex** under **Filter policies**, choose **AmazonLexReadOnly** and **AmazonLexRunBotsOnly**, and choose **Attach policy**.
+![](../images/greetings_visitor_6c.gif)
+
+1. Access right granted for **Cognito_botpoolUnauth_Role**; repeat above steps to grant access for **Cognito_botpoolAuth_Role**.
+![](../images/greetings_visitor_6d.gif)
+
+
+**Test your chatbot on the web**  
+Change the values of `region`, `IdentityPoolId`, `botName` in the [HTML file](../source/aws-lex-template.html) that you can use to test your bot.
 
 ```
 <!DOCTYPE html>
@@ -76,7 +90,7 @@ You quickly put together an [HTML file](../source/aws-lex-template.html) that yo
 </head>
 
 <body>
-  <h1 style="text-align:  left">Amazon Lex - Chatbot Test</h1>
+  <h1 style="text-align:  left">Amazon Lex - Sample Application</h1>
   <p style="width: 400px">
     This little chatbot shows how easy it is to incorporate
     <a href="https://aws.amazon.com/lex/" title="Amazon Lex (product)" target="_new">Amazon Lex</a> into your web pages.  Try it out.
@@ -93,7 +107,7 @@ You quickly put together an [HTML file](../source/aws-lex-template.html) that yo
     AWS.config.region = 'ap-southeast-2'; // Region
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
     // Provide your Pool Id here
-      IdentityPoolId: 'us-east-1:XXXXX',
+      IdentityPoolId: 'ap-southeast-2:XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
     });
 
     var lexruntime = new AWS.LexRuntime();
@@ -186,15 +200,5 @@ You quickly put together an [HTML file](../source/aws-lex-template.html) that yo
 </html>
 ```
 
-You upload the file so that you can host it on Amazon S3 as a static web site to test your chatbot on the web.
+You upload the file so that you can host it on your web server as a static web site to test your chatbot on the web.
 ![](../images/greetings_visitor_8.gif)
-
-Now that・s a productive morning! You send a quick note to the team and head out for a well-deserved break.
-
-**Monitoring and feedback**
-By the time you get back, a few people have already tried out the bot. You check the Amazon Lex console for metrics.
-
-You notice that some people have been saying, ：hotel for 2 nights； and Amazon Lex isn・t catching that, so you add a new utterance and rebuild the bot: You realize that you can use the Model API to do this programmatically, but this will do for now. You・ve met your goal and can now demo your solution.
-
-**Conclusion**
-Amazon Lex makes it easy to create functioning bots in minutes. Using services like Amazon Cognito and Amazon S3, you can quickly integrate a chatbot into a web experience, but there is so much more to do. How can you tell when there are a hundred users of the new bot? Could you wire it up to the web analytics? Could you fire analytics events when the visitor gets to a certain step in the interaction?
