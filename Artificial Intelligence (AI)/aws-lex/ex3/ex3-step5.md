@@ -60,13 +60,13 @@ You can folloe below steps to import the bot to your Amazon Lex for further deve
    + ModifyReservation – Elicits the confirmation code and last four digits of the user’s credit card number to modify the reservation.
    + CancelReservation – Elicits the confirmation code to cancel the reservation.
 
-1. In the Amazon Lex console, choose **Actions**, then **Import**.
+1. In the Amazon Lex console, choose **Actions**, then **Import**.  
 ![](../images/ex3-step5-03.png)
 
-1. Choose **Browse** and select downloaded zip file, choose **Import**.
+1. Choose **Browse** and select downloaded zip file, choose **Import**.  
 ![](../images/ex3-step5-04.png)
 
-1. Choose `FlightReservationBot` with status `NOT-BUILT`.
+1. Choose `FlightReservationBot` with status `NOT-BUILT`.  
 ![](../images/ex3-step5-05.png)
 
 1. Choose **Build** and test the bot.
