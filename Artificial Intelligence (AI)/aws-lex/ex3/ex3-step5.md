@@ -34,4 +34,4 @@ To add the `FlightNo` slot type to the `BookHotel` intent, complete the followin
 1. Design the rest of the bot as per your use-case.
 1. Choose **Save Intent**, **Build**, and **Publish**.
 
-Your bot is now ready to use. You can test it by providing a flight number such as ABCDE that does not match the pattern specified by the regular expression.
+Your bot is now ready to use. You can test it by providing a flight number such as ABCDE that does not match the pattern specified by the regular expression. For more information please refer to the [Built-in Slot Types](https://docs.aws.amazon.com/lex/latest/dg/howitworks-builtins-slots.html). 
