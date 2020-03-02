@@ -35,3 +35,38 @@ To add the `FlightNo` slot type to the `BookHotel` intent, complete the followin
 1. Choose **Save Intent**, **Build**, and **Publish**.
 
 Your bot is now ready to use. You can test it by providing a flight number such as ABCDE that does not match the pattern specified by the regular expression. For more information please refer to the [Built-in Slot Types](https://docs.aws.amazon.com/lex/latest/dg/howitworks-builtins-slots.html). 
+
+## Import Bot
+We have prepared the scenario and model a bot uses the following conversation to :
+```
+User: I want to reschedule my flight.
+Agent: Sure. Can you provide the confirmation code?
+User: ABC12D
+Agent: Thank you. I see you are on the 6 AM flight to Seattle tomorrow. What would you like to change to?
+User: I want to change to next Monday.
+Agent: What time would you prefer to travel?
+User: 8 AM.
+Agent: Sure. Let me make that change. For authentication purposes, can I get the last four digits of the credit card number?
+User: 1234.
+Agent: Excellent. I have rescheduled you for the flight departing on February 10 at 8 AM. Anything else I can help you with?
+User: No.
+Agent: Thank you. Have a great day!
+```
+
+You can folloe below steps to import the bot to your Amazon Lex for further development.
+
+1. Download the bot ([`FlightReservationBot`](../source/FlightReservationBot.zip)) with the following intents:
+   + MakeReservation – Elicits the travel date, source, and destination cities to process a reservation and return a booking confirmation code.
+   + ModifyReservation – Elicits the confirmation code and last four digits of the user’s credit card number to modify the reservation.
+   + CancelReservation – Elicits the confirmation code to cancel the reservation.
+
+1. In the Amazon Lex console, choose **Actions**, then **Import**.
+![](../images/ex3-step5-03.png)
+
+1. Choose **Browse** and select downloaded zip file, choose **Import**.
+![](../images/ex3-step5-04.png)
+
+1. Choose `FlightReservationBot` with status `NOT-BUILT`.
+![](../images/ex3-step5-05.png)
+
+1. Choose **Build** and test the bot.
