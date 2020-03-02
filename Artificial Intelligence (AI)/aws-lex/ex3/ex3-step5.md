@@ -29,7 +29,7 @@ You can now use the `FlightNo` slot type to design the `BookHotel` intent for yo
 To add the `FlightNo` slot type to the `BookHotel` intent, complete the following steps:
 
 1. In the Amazon Lex console, choose the **BookTrip** bot. 
-1. On the **Editor** tab, under **Intents**, choose `BookHotel`.
+1. On the **Editor** tab, under **Intents**, choose **BookHotel**.
 1. Under **Slots**, add a new slot `ArrivalFlightNo` with Slot type `FlightNo` with an appropriate prompt (`Please provide us your arrival flight number for free airport delivery`).
 1. Design the rest of the bot as per your use-case.
 1. Choose **Save Intent**, **Build**, and **Publish**.
