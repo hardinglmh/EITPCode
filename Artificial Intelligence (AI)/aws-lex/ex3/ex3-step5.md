@@ -17,7 +17,7 @@ You can create the built-in slot type `AMAZON.AlphaNumeric`. Such a design helps
 
 1. For **Description**, enter a description (`Flight Number`) of your slot type.
 
-1. For **Regular expression**, restrict the slot type to the six-character fixed format as specified previously by entering the expression `[A-Z]{2}[0-9]{4}`.
+1. For **Regular expression**, restrict the slot type to the six-character fixed format as specified previously by entering the expression `[a-zA-Z]{2}[0-9]{4}`.
 
 1. Choose **Save slot type**.  
 ![](../images/ex3-step5-02.png)
