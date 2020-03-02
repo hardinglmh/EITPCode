@@ -32,3 +32,6 @@ In this section, you update the configurations of both the BookCar and BookHotel
    
 **Note**  
 This illustrates how session attributes can be used to maintain context across intents. The console client provides the **Clear** link in the test window that a user can use to clear any prior session attributes.
+
+**Next Step**  
+[Step 5 (Optional): Capturing and Validating Alphanumeric Identifiers](ex3-step5.md)
