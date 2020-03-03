@@ -1,6 +1,6 @@
 # Step 1: Create an Amazon Lex Bot
 
-To create an Amazon Lex bot
+**To create an Amazon Lex bot**
 
 1. Sign in to the AWS Management Console and open the Amazon Lex console at [https://console.aws.amazon.com/lex/](https://console.aws.amazon.com/lex/).
 
@@ -17,7 +17,7 @@ To create an Amazon Lex bot
 
 1. Test the bot.
 
-**Note**  
+***Note***  
 You can test the bot by typing text into the test window, or, for compatible browsers, by choosing the microphone button in the test window and speaking.
 
    Use the following example text to engage in conversation with the bot to order flowers:
@@ -26,7 +26,7 @@ You can test the bot by typing text into the test window, or, for compatible bro
    From this input, the bot infers the `OrderFlowers` intent and prompts for slot data. When you provide all of the required slot data, the bot fulfills the intent (`OrderFlowers`) by returning all of the information to the client application (in this case, the console). The console shows the information in the test window.
 
    Specifically:
-   + In the statement "What day do you want the roses to be picked up?,"the term "roses" appears because the prompt for the `pickupDate` slot is configured using substitutions, `{FlowerType}`. Verify this in the console.
+   + In the statement "What day do you want the roses to be picked up?, "the term "roses" appears because the prompt for the `pickupDate` slot is configured using substitutions, `{FlowerType}`. Verify this in the console.
    + The "Okay, your roses will be ready..." statement is the confirmation prompt that you configured.
    + The last statement ("`FlowerType:roses...`") is just the slot data that is returned to the client, in this case, in the test window. In the next exercise, you use a Lambda function to fulfill the intent, in which case you get a message indicating that the order is fulfilled.
 
