@@ -1,4 +1,4 @@
-# Exercise 4: Integrate Your Amazon Lex Bot with Static Web Page
+# Exercise 4: Integrate Your Amazon Lex Bot On The Web
 
 You have built and tested your bots in the previous exercises. It is time for you to push this out to a static website, but you want to ensure it's not left wide open. You know Amazon Cognito will let you manage permissions and users for mobile and web apps, so you start with an Amazon Cognito federated identity pool.
 
@@ -14,7 +14,7 @@ You have built and tested your bots in the previous exercises. It is time for yo
 1. Create the pool and the associated AWS Identity and Access Management (IAM) roles, you choose **Allow**. Then, you record the IAM role names so you can modify them:
 ![](../images/greetings_visitor_5.gif)
 
-1. On the **Sample code** page, choose **JavaScript** in platform, you get the **AWS Credentials** that you need for integrating the bot.
+1. On the **Sample code** page, choose `JavaScript` in **Platform**, you get the **AWS Credentials** that you need for integrating the bot.
 ![](../images/greetings_visitor_6.gif)
 
 1. Modify the IAM roles to allow access to Amazon Lex, open the AWS IAM console at [https://console.aws.amazon.com/iam/](https://console.aws.amazon.com/iam/).
@@ -25,14 +25,14 @@ You have built and tested your bots in the previous exercises. It is time for yo
 1. Choose **Cognito_botpoolUnauth_Role**, choose **Attach policies**.
 ![](../images/greetings_visitor_6b.gif)
 
-1. Search **AmazonLex** under **Filter policies**, choose **AmazonLexReadOnly** and **AmazonLexRunBotsOnly**, and choose **Attach policy**.
+1. Type **AmazonLex** in **Filter policies**, choose **AmazonLexReadOnly** and **AmazonLexRunBotsOnly**, and choose **Attach policy**.
 ![](../images/greetings_visitor_6c.gif)
 
 1. Access right granted for **Cognito_botpoolUnauth_Role**; repeat above steps to grant access for **Cognito_botpoolAuth_Role**.
 ![](../images/greetings_visitor_6d.gif)
 
 
-**Test your chatbot on the web**  
+**Test your Chatbot by Static HTML Page**
 Download the [HTML file for BookTrip](../source/aws-lex-template.html) and run it in your browser. Change the values of `region`, `IdentityPoolId`, `botName` and placeholder of `wisdom` if you want to test your bots.
 
 ```
@@ -201,5 +201,26 @@ Download the [HTML file for BookTrip](../source/aws-lex-template.html) and run i
 </html>
 ```
 
-You can upload and host the HTML file on your web server as a static web site to test your chatbot in the public.
+You can upload and host the HTML file on your web server as a static HTML page to test your chatbot in the public.  
 ![](../images/greetings_visitor_8.gif)
+
+This page supports the **Plain Text** bot only. You can embed your own UI and UX design to the static page for decoration.
+
+
+**Test your Chatbot by Chatbot Webapp**
+
+  - Copy `[aws-lex-bot-wizard](../source/aws-lex-bot-wizard)` folder to project.
+  - Just add [following markup](../source/aws-lex-bot-wizard/widget.html) to any page or add new html file with this content:
+  ```
+  <script>
+    fullPage = false;
+    chatbot_identifier = 'chatbot-widget';
+    botName = '<lex-bot>'
+    awsRegion = '<aws-region>'
+    awsCognitoPoolId = '<aws-cognito-pool>'
+  </script>
+  <div id="chatbot-widget" data-username="Hey User">
+  <script src="bundle.min.js"></script>
+  ```
+  Change the `botName`, `awsRegion`, `awsCognitoPoolId` and bundle file path.
+  - [Full Page HTML with `OrderFlowers` Bot](../source/aws-lex-bot-wizard/full-page.html) for your reference.
