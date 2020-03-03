@@ -4,7 +4,7 @@ In this section, you can use `AMAZON.AlphaNumeric` slot type in Amazon Lex to ca
 
 ## Create New Slot Type
 
-You can create the built-in slot type `AMAZON.AlphaNumeric`. Such a design helps capture alphanumeric information but doesn’t validate it. To validate, use a regular expression. Create a new slot type `FlightNo` by extending `AMAZON.AlphaNumeric`. The flight number has a fixed format of six characters: `[letter] [letter][number][number][number][number]`. For example, `HK2020` is a flight number.
+You can create the built-in slot type `AMAZON.AlphaNumeric`. Such a design helps capture alphanumeric information but doesn’t validate it. To validate, use a regular expression. Create a new slot type `FlightNo` by extending `AMAZON.AlphaNumeric`. The flight number has a fixed format of six characters: `[letter][letter][number][number][number][number]`. For example, `HK2020` is a flight number.
 
 1. In the Amazon Lex console, choose the **BookTrip** bot.
 
