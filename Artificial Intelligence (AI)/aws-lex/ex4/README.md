@@ -29,10 +29,10 @@ You have built and tested your bots in the previous exercises. It is time for yo
 ![](../images/greetings_visitor_6c.gif)
 
 1. Access right granted for **Cognito_botpoolUnauth_Role**; repeat above steps to grant access for **Cognito_botpoolAuth_Role**.
-![](../images/greetings_visitor_6d.gif)
+![](../images/greetings_visitor_6d.gif)  
 
 
-**Test your Chatbot by Static HTML Page**
+**Test your Chatbot by Static HTML Page**  
 Download the [HTML file for BookTrip](../source/aws-lex-template.html) and run it in your browser. Change the values of `region`, `IdentityPoolId`, `botName` and placeholder of `wisdom` if you want to test your bots.
 
 ```
@@ -204,8 +204,7 @@ Download the [HTML file for BookTrip](../source/aws-lex-template.html) and run i
 You can upload and host the HTML file on your web server as a static HTML page to test your chatbot in the public.  
 ![](../images/greetings_visitor_8.gif)
 
-This page supports the **Plain Text** bot only. You can embed your own UI and UX design to the static page for decoration.
-
+This page supports the **Plain Text** bot only. You can embed your own UI and UX design to the static page for decoration.  
 
 **Test your Chatbot by Chatbot Webapp**
 
