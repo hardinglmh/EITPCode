@@ -223,3 +223,5 @@ You can upload and host the [Static HTML Page](../source/aws-lex-template.html) 
   Change the `botName`, `awsRegion`, `awsCognitoPoolId` and bundle file path.
   
   [Full Page HTML](../source/aws-lex-bot-wizard/full-page.html) with `OrderFlowers` Bot for your reference.
+
+  This webapp supports the **Response Card** feature.
