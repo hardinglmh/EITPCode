@@ -10,7 +10,7 @@ You return to the Amazon Lex console and add the Lambda function as the code hoo
 
 1. Choose **Create function**.
 
-1. On the **Create function** page, choose **Use a blueprint**. Type **lex-** in the filter text box and then press `Enter` to find the blueprint, choose the `lex-order-flowers-python` blueprint.
+1. On the **Create function** page, choose **Use a blueprint**. Type **lex-** in the filter text box and then press `Enter` to find the blueprint, choose the `lex-order-flowers-python` blueprint and choose `Configure`.
 
    Lambda function blueprints are provided in both Node.js and Python. For this exercise, use the Python-based blueprint.
 
@@ -25,7 +25,7 @@ You return to the Amazon Lex console and add the Lambda function as the code hoo
 
    1. Choose **Select a test event**, **Configure test events**.
 
-   1. Choose **Amazon Lex Order Flowers** from the **Event template** list. Give the test event a name (`LexOrderFlowersTest`).
+   1. Choose **Amazon Lex Order Flowers** from the **Event template** list. Give the test event a name ([`LexOrderFlowersTest`](../source/lex-order-flowers-test.json)).
 
    1. Choose **Create**.
 
