@@ -210,7 +210,7 @@ This page supports the **Plain Text** bot only. You can embed your own UI and UX
 **Test your Chatbot by Chatbot Webapp**
 
   - Copy [`aws-lex-bot-wizard`](../source/aws-lex-bot-wizard) folder to project.
-  - Just add [following markup](../source/aws-lex-bot-wizard/widget.html) to any page or add new html file with this content:
+  - Just add following [markup](../source/aws-lex-bot-wizard/widget.html) to any page or add new html file with this content:
   ```
   <script>
     fullPage = false;
@@ -223,4 +223,5 @@ This page supports the **Plain Text** bot only. You can embed your own UI and UX
   <script src="bundle.min.js"></script>
   ```
   Change the `botName`, `awsRegion`, `awsCognitoPoolId` and bundle file path.
-  - [Full Page HTML with `OrderFlowers` Bot](../source/aws-lex-bot-wizard/full-page.html) for your reference.
+  
+  [Full Page HTML with `OrderFlowers` Bot](../source/aws-lex-bot-wizard/full-page.html) for your reference.
