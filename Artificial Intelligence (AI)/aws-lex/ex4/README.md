@@ -201,7 +201,7 @@ Download the [HTML file for BookTrip](../source/aws-lex-template.html) and run i
 </html>
 ```
 
-You can upload and host the HTML file on your web server as a static HTML page to test your chatbot in the public.  
+You can upload and host the [Static HTML Page](../source/aws-lex-template.html) on your web server to test your chatbot in the public.  
 ![](../images/greetings_visitor_8.gif)
 
 This page supports the **Plain Text** bot only. You can embed your own UI and UX design to the static page for decoration.  
