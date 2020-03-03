@@ -53,7 +53,7 @@ User: No.
 Agent: Thank you. Have a great day!
 ```
 
-You can folloe below steps to import the bot to your Amazon Lex for further development.
+You can follow below steps to import the bot to your Amazon Lex for further development.
 
 1. Download the bot ([`FlightReservationBot`](../source/FlightReservationBot.zip)) with the following intents:
    + MakeReservation – Elicits the travel date, source, and destination cities to process a reservation and return a booking confirmation code.
