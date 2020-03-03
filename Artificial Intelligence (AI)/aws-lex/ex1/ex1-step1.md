@@ -17,7 +17,7 @@ To create an Amazon Lex bot
 
 1. Test the bot.
 
-**Note**
+**Note**  
 You can test the bot by typing text into the test window, or, for compatible browsers, by choosing the microphone button in the test window and speaking.
 
    Use the following example text to engage in conversation with the bot to order flowers:
