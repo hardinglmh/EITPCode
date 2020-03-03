@@ -37,7 +37,7 @@ To add the `FlightNo` slot type to the `BookHotel` intent, complete the followin
 Your bot is now ready to use. You can test it by providing a flight number such as ABCDE that does not match the pattern specified by the regular expression. For more information please refer to the [Built-in Slot Types](https://docs.aws.amazon.com/lex/latest/dg/howitworks-builtins-slots.html). 
 
 ## Import Bot
-We have prepared the scenario and model a bot uses the following conversation to :
+We have prepared another scenario and model a bot uses the following conversation to :
 ```
 User: I want to reschedule my flight.
 Agent: Sure. Can you provide the confirmation code?
