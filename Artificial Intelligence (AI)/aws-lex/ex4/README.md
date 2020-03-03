@@ -202,13 +202,11 @@ You have built and tested your bots in the previous exercises. It is time for yo
   </html>
   ```
 
-  You can upload and host the [Static HTML Page](../source/aws-lex-template.html) on your web server to test your chatbot in the public. 
-  
-  This page supports the **Plain Text** bot only. You can embed your own UI and UX design to the static page for decoration.  
+You can upload and host the [Static HTML Page](../source/aws-lex-template.html) on your web server to test your chatbot in the public. This page supports the **Plain Text** bot only. You can embed your own UI and UX design to the static page for decoration.  
 ![](../images/greetings_visitor_8.gif)
 
 
-   **Test your Chatbot by Chatbot Webapp**
+**Test your Chatbot by Chatbot Webapp**
   - Copy [`aws-lex-bot-wizard`](../source/aws-lex-bot-wizard) folder to project.
   - Just add following [markup](../source/aws-lex-bot-wizard/widget.html) to any page or add new html file with this content:
   ```
@@ -224,4 +222,4 @@ You have built and tested your bots in the previous exercises. It is time for yo
   ```
   Change the `botName`, `awsRegion`, `awsCognitoPoolId` and bundle file path.
   
-  [Full Page HTML with `OrderFlowers` Bot](../source/aws-lex-bot-wizard/full-page.html) for your reference.
+  [Full Page HTML](../source/aws-lex-bot-wizard/full-page.html) with `OrderFlowers` Bot for your reference.
