@@ -18,6 +18,3 @@ In the preceding section, you tested the `ScheduleAppointment` bot using the cli
   Change the `botName`, `awsRegion`, `awsCognitoPoolId` and bundle file path.
   
  [Widget HTML](../source/aws-lex-bot-wizard/widget.html) with `ScheduleAppointment` Bot for your reference.
-
-**Next Step**  
-[Details of Information Flow](ex5-step5.md)
