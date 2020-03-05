@@ -115,8 +115,9 @@ This section describes what happens after each user input.
 ![](../images/respcard-10.png)
 
    1. As indicated by the `dialogAction.type` in the response from the Lambda function, Amazon Lex sends the following response back to the client:   
+
 ```
-RequestID: fa34263e-b5ba-47d8-90b3-3487ea92c692
+RequestID: 2edd983c-f1eb-449b-8435-eca261e96b5e
 {
   "dialogState": "ElicitSlot",
   "intentName": "MakeAppointment",
@@ -151,7 +152,7 @@ RequestID: fa34263e-b5ba-47d8-90b3-3487ea92c692
   },
   "sentimentResponse": null,
   "sessionAttributes": {},
-  "sessionId": "2020-03-04T06:10:57.969Z-OodVQpHh",
+  "sessionId": "2020-03-05T02:03:01.592Z-wuzQPCkG",
   "slotToElicit": "AppointmentType",
   "slots": {
     "AppointmentType": null,
@@ -276,12 +277,13 @@ RequestID: fa34263e-b5ba-47d8-90b3-3487ea92c692
 
    1. Amazon Lex notices the `dialogAction.type` and returns a response to the client that includes information from the Lambda function's response.  
 ![](../images/appt-20.png)
+
 ```
-RequestID: 26436a32-671d-407d-afb4-25a97171ac65
+RequestID: 79976525-6077-44a3-b8ef-9190df6b33bb
 {
   "dialogState": "ElicitSlot",
   "intentName": "MakeAppointment",
-  "message": "We do not have any availability on that date, is there another day which works for you?",
+  "message": "When would you like to schedule your root canal?",
   "messageFormat": "PlainText",
   "responseAttributes": null,
   "responseCard": {
@@ -312,17 +314,15 @@ RequestID: 26436a32-671d-407d-afb4-25a97171ac65
           }
         ],
         "imageUrl": null,
-        "subTitle": "What day works best for you?",
+        "subTitle": "When would you like to schedule your root canal?",
         "title": "Specify Date"
       }
     ],
     "version": "1"
   },
   "sentimentResponse": null,
-  "sessionAttributes": {
-    "bookingMap": "{\"2020-03-05\": []}"
-  },
-  "sessionId": "2020-03-04T06:10:57.969Z-OodVQpHh",
+  "sessionAttributes": {},
+  "sessionId": "2020-03-05T02:03:01.592Z-wuzQPCkG",
   "slotToElicit": "Date",
   "slots": {
     "AppointmentType": "root canal",
@@ -445,6 +445,62 @@ RequestID: 26436a32-671d-407d-afb4-25a97171ac65
    1. Amazon Lex notices the `dialogAction.type` and returns a response to the client that includes information from the Lambda function's response.  
 ![](../images/appt-30.png)
 
+```
+RequestID: 7b2c29f2-e7cc-4ac6-8ca5-e0150c7d181d
+{
+  "dialogState": "ElicitSlot",
+  "intentName": "MakeAppointment",
+  "message": "We do not have any availability on that date, is there another day which works for you?",
+  "messageFormat": "PlainText",
+  "responseAttributes": null,
+  "responseCard": {
+    "contentType": "application/vnd.amazonaws.card.generic",
+    "genericAttachments": [
+      {
+        "attachmentLinkUrl": null,
+        "buttons": [
+          {
+            "text": "3-5 (Thu)",
+            "value": "Thursday, March 05, 2020"
+          },
+          {
+            "text": "3-6 (Fri)",
+            "value": "Friday, March 06, 2020"
+          },
+          {
+            "text": "3-9 (Mon)",
+            "value": "Monday, March 09, 2020"
+          },
+          {
+            "text": "3-10 (Tue)",
+            "value": "Tuesday, March 10, 2020"
+          },
+          {
+            "text": "3-11 (Wed)",
+            "value": "Wednesday, March 11, 2020"
+          }
+        ],
+        "imageUrl": null,
+        "subTitle": "What day works best for you?",
+        "title": "Specify Date"
+      }
+    ],
+    "version": "1"
+  },
+  "sentimentResponse": null,
+  "sessionAttributes": {
+    "bookingMap": "{\"2020-03-10\": []}"
+  },
+  "sessionId": "2020-03-05T02:03:01.592Z-wuzQPCkG",
+  "slotToElicit": "Date",
+  "slots": {
+    "AppointmentType": "root canal",
+    "Date": null,
+    "Time": null
+  }
+}
+```
+
       The client displays the message: **We do not have any availability on that date, is there another day which works for you?** and the response card (if the client supports response cards).
 
 1. User: Depending on the client, the user has two options:
@@ -548,6 +604,50 @@ The Facebook Messenger client does not set any session attributes. If you want t
 
    1. As indicated in the `dialogAction.type` in the Lambda function's response, Amazon Lex returns the following response to the client:   
 ![](../images/appt-40.png)
+
+```
+RequestID: bc1d3bad-0633-42b0-b3ad-84b304728610
+{
+  "dialogState": "ConfirmIntent",
+  "intentName": "MakeAppointment",
+  "message": "What time on 2020-03-11 works for you? 4:00 p.m. is our only availability, does that work for you?",
+  "messageFormat": "PlainText",
+  "responseAttributes": null,
+  "responseCard": {
+    "contentType": "application/vnd.amazonaws.card.generic",
+    "genericAttachments": [
+      {
+        "attachmentLinkUrl": null,
+        "buttons": [
+          {
+            "text": "yes",
+            "value": "yes"
+          },
+          {
+            "text": "no",
+            "value": "no"
+          }
+        ],
+        "imageUrl": null,
+        "subTitle": "Is 4:00 p.m. on 2020-03-11 okay?",
+        "title": "Confirm Appointment"
+      }
+    ],
+    "version": "1"
+  },
+  "sentimentResponse": null,
+  "sessionAttributes": {
+    "bookingMap": "{\"2020-03-05\": [], \"2020-03-10\": [], \"2020-03-11\": [\"10:00\", \"16:00\", \"16:30\"]}"
+  },
+  "sessionId": "2020-03-05T02:03:01.592Z-wuzQPCkG",
+  "slotToElicit": null,
+  "slots": {
+    "AppointmentType": "root canal",
+    "Date": "2020-03-11",
+    "Time": "16:00"
+  }
+}
+```
 
       The client displays the message: **What time on 2020-03-11 works for you? 4:00 p.m. is our only availability, does that work for you?**
 
