@@ -1,4 +1,4 @@
-# Exercise 5: Schedule Appointment
+# Exercise 5: Create a Bot with Dynamic Response Card
 
 The example bot in this exercise schedules appointments for a dentist's office. The example also illustrates using response cards to obtain user input with buttons. Specifically, the example illustrates generating response cards dynamically at runtime.
 
