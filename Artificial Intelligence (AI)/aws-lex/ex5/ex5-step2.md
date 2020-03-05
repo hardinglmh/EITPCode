@@ -6,7 +6,7 @@ In this section, you create a Lambda function using a blueprint ([**lex-make-app
 
 1. Choose **Create a Lambda function**.
 
-1. For **Select blueprint**, type **lex** to find the blueprint, and then choose the **lex-make-appointment-python** blueprint.
+1. For **Select blueprint**, type **lex** to find the blueprint, and then choose the **[**lex-make-appointment-python**](../source/lex-make-appointment-python.js)** blueprint.
 
 1. Configure the Lambda function as follows, and then choose **Create Function**.
    + Type the Lambda function name (`MakeAppointmentCodeHook`).
@@ -16,7 +16,7 @@ In this section, you create a Lambda function using a blueprint ([**lex-make-app
 
    1. Choose **Select a test event, Configure test events**.
    
-   1. Choose **Amazon Lex Make Appointment** from the **Event template** list. Give the test event a name (`[LexMakeAppointmentTest](../source/lex-make-appointment-test.json)`).
+   1. Choose **Amazon Lex Make Appointment** from the **Event template** list. Give the test event a name ([`LexMakeAppointmentTest`](../source/lex-make-appointment-test.json)).
 
    1. Choose **Create**.
 
