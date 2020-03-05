@@ -41,26 +41,26 @@ The following sections provide summary information about the blueprints you use 
 ## Overview of the Bot Blueprint (ScheduleAppointment)<a name="sch-appt-bp-summary-bot"></a>
 
 The ScheduleAppointment blueprint that you use to create a bot for this exercise is preconfigured with the following:
-+ **Slot types** ¡V One custom slot type called `AppointmentTypeValue`, with the enumeration values `root canal`, `cleaning`, and `whitening`.
-+ **Intent** ¡V One intent (`MakeAppointment`), which is preconfigured as follows:
-  + **Slots** ¡V The intent is configured with the following slots:
++ **Slot types** - One custom slot type called `AppointmentTypeValue`, with the enumeration values `root canal`, `cleaning`, and `whitening`.
++ **Intent** - One intent (`MakeAppointment`), which is preconfigured as follows:
+  + **Slots** - The intent is configured with the following slots:
     + Slot `AppointmentType`, of the `AppointmentTypes` custom type.
     + Slot `Date`, of the `AMAZON.DATE` built-in type.
     + Slot `Time`, of the `AMAZON.TIME` built-in type.
-  + **Utterances** ¡V The intent is preconfigured with the following utterances: 
+  + **Utterances** - The intent is preconfigured with the following utterances: 
     + "I would like to book an appointment"
     + "Book an appointment" 
     + "Book a {AppointmentType}"
 
     If the user utters any of these, Amazon Lex determines that `MakeAppointment` is the intent, and then uses the prompts to elicit slot data.
-  + **Prompts** ¡V The intent is preconfigured with the following prompts:
-    + Prompt for the `AppointmentType` slot ¡V "What type of appointment would you like to schedule?"
-    + Prompt for the `Date` slot ¡V "When should I schedule your {AppointmentType}?"
-    + Prompt for the `Time` slot ¡V "At what time do you want to schedule the {AppointmentType}?" and 
+  + **Prompts** - The intent is preconfigured with the following prompts:
+    + Prompt for the `AppointmentType` slot - "What type of appointment would you like to schedule?"
+    + Prompt for the `Date` slot - "When should I schedule your {AppointmentType}?"
+    + Prompt for the `Time` slot - "At what time do you want to schedule the {AppointmentType}?" and 
 
       "At what time on {Date}?"
-    + Confirmation prompt ¡V "{Time} is available, should I go ahead and book your appointment?" 
-    + Cancel message¡V "Okay, I will not schedule an appointment."
+    + Confirmation prompt - "{Time} is available, should I go ahead and book your appointment?" 
+    + Cancel message â€“ "Okay, I will not schedule an appointment."
 
 ## Overview of the Lambda Function Blueprint ([lex-make-appointment-python](../source/lex-make-appointment-python.py))<a name="sch-appt-summary-lambda"></a>
 
