@@ -36,7 +36,6 @@ The following sections provide summary information about the blueprints you use 
 + [Step 2: Create a Lambda Function](ex5-step2.md)
 + [Step 3: Update the Intent: Configure a Code Hook](ex5-step3.md)
 + [Step 4: Deploy the Bot on the Chatbot Webapp](ex5-step4.md)
-+ [Details of Information Flow](ex5-step5.md)
 
 ## Overview of the Bot Blueprint (ScheduleAppointment)<a name="sch-appt-bp-summary-bot"></a>
 
