@@ -35,5 +35,9 @@ The Lambda function in this exercise performs both initialization and validation
 + As an initialization and validation code hook, the Lambda function performs basic validation. For example, if the user provides a time for pickup that is outside of normal business hours, the Lambda function directs Amazon Lex to re-prompt the user for the time.
 + As part of the fulfillment code hook, the Lambda function returns a summary message indicating that the flower order has been placed (that is, the intent is fulfilled).
 
+
+**Video Playlist**  
+https://www.youtube.com/playlist?list=PL7dtPnQuxetIHWYVCstEuzE3USZ22fj3b
+
 **Next Step**  
 [Step 1: Create an Amazon Lex Bot](ex1-step1.md)
