@@ -226,7 +226,10 @@ You can upload and host the [Static HTML Page](../source/aws-lex-template.html) 
   [Full Page HTML](../source/aws-lex-bot-wizard/full-page.html) with `OrderFlowers` Bot for your reference.
 
   This webapp supports the **Response Card** feature.
+  
+![](../images/ex4-step2.png)
 
+  
 **Test your Chatbot by Web UI Component**  
 Directly loading the chatbot UI component works at a lower level than using the loader library as described above. This approach can be used if you want to manually control the rendering, configuration and dependency loading process.
 
@@ -304,5 +307,7 @@ The HTML code below is an illustration of directly loading the chatbot UI librar
   </html>
   ```
   Change the `botName`, `region`, `poolId`, JavaScript and CSS file path.
+  
+![](../images/ex4-step3.gif)
   
   For more information, please refer to [Sample Amazon Lex Web Interface](https://github.com/aws-samples/aws-lex-web-ui).
