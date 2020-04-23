@@ -94,7 +94,7 @@ You have built and tested your bots in the previous exercises. It is time for yo
         This little chatbot shows how easy it is to incorporate
         <a href="https://aws.amazon.com/lex/" title="Amazon Lex (product)" target="_new">Amazon Lex</a> into your web pages.  Try it out.
       </p>
-      <div id="conversation" style="width: 400px; height: 400px; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
+      <div id="conversation" style="width: 400px; height: 500px; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
       <form id="chatform" style="margin-top: 10px" onsubmit="return pushChat();">
         <!-- placeholder for input hint -->
         <input type="text" id="wisdom" size="80" value="" placeholder="Buy Flowers">
@@ -106,7 +106,7 @@ You have built and tested your bots in the previous exercises. It is time for yo
         // Initialize the Amazon Cognito credentials provider
         AWS.config.region = 'ap-southeast-2'; // Region
         AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-            IdentityPoolId: 'ap-southeast-2:6ce36b74-9574-457c-a74e-ef6bad4c0d70',
+            IdentityPoolId: 'ap-southeast-2:XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
         });
 
         var lexruntime = new AWS.LexRuntime();
@@ -200,7 +200,7 @@ You have built and tested your bots in the previous exercises. It is time for yo
 
 You can upload and host the [Static HTML Page](../source/aws-lex-template.html) on your web server to test your chatbot in the public. This page supports the **Plain Text** bot only. You can embed your own UI and UX design to the static page for decoration.  
   
-![](../images/greetings_visitor_8.gif)
+![](../images/ex4-step1.png)
 
 
 **Test your Chatbot by Webapp**
