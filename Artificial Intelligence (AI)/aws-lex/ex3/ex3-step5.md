@@ -39,20 +39,18 @@ Your bot is now ready to use. You can test it by providing a flight number such 
 
 ## Import Bot
 We have prepared another scenario and model a bot uses the following conversation to :
-```
-User: I want to reschedule my flight.
-Agent: Sure. Can you provide the confirmation code?
-User: ABC12D
-Agent: Thank you. I see you are on the 6 AM flight to Seattle tomorrow. What would you like to change to?
-User: I want to change to next Monday.
-Agent: What time would you prefer to travel?
-User: 8 AM.
-Agent: Sure. Let me make that change. For authentication purposes, can I get the last four digits of the credit card number?
-User: 1234.
-Agent: Excellent. I have rescheduled you for the flight departing on February 10 at 8 AM. Anything else I can help you with?
-User: No.
-Agent: Thank you. Have a great day!
-```
+> User: I want to reschedule my flight.
+> Agent: Sure. Can you provide the confirmation code?
+> User: ABC12D
+> Agent: Thank you. I see you are on the 6 AM flight to Seattle tomorrow. What would you like to change to?
+> User: I want to change to next Monday.
+> Agent: What time would you prefer to travel?
+> User: 8 AM.
+> Agent: Sure. Let me make that change. For authentication purposes, can I get the last four digits of the credit card number?
+> User: 1234.
+> Agent: Excellent. I have rescheduled you for the flight departing on February 10 at 8 AM. Anything else I can help you with?
+> User: No.
+> Agent: Thank you. Have a great day!
 
 You can follow below steps to import the bot to your Amazon Lex for further development.
 
