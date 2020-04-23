@@ -42,7 +42,7 @@ You have built and tested your bots in the previous exercises. It is time for yo
   
   <head>
     <title>Amazon Lex for JavaScript - BookTrip</title>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.149.0.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.661.0.min.js"></script>
     <style language="text/css">
       input#wisdom {
         padding: 4px;
@@ -203,10 +203,11 @@ You have built and tested your bots in the previous exercises. It is time for yo
   ```
 
 You can upload and host the [Static HTML Page](../source/aws-lex-template.html) on your web server to test your chatbot in the public. This page supports the **Plain Text** bot only. You can embed your own UI and UX design to the static page for decoration.  
+  
 ![](../images/greetings_visitor_8.gif)
 
 
-**Test your Chatbot by Chatbot Webapp**
+**Test your Chatbot by Webapp**
   - Copy [`aws-lex-bot-wizard`](../source/aws-lex-bot-wizard) folder to project.
   - Just add following [markup](../source/aws-lex-bot-wizard/widget.html) to any page or add new html file with this content:
   ```
@@ -225,3 +226,83 @@ You can upload and host the [Static HTML Page](../source/aws-lex-template.html) 
   [Full Page HTML](../source/aws-lex-bot-wizard/full-page.html) with `OrderFlowers` Bot for your reference.
 
   This webapp supports the **Response Card** feature.
+
+**Test your Chatbot by Web UI Component**  
+Directly loading the chatbot UI component works at a lower level than using the loader library as described above. This approach can be used if you want to manually control the rendering, configuration and dependency loading process.
+
+The entry point to the chatbot UI component is the `lex-web-ui.js` JavaScript file. The UI CSS styles are contained in the `lex-web-ui.css` file. The component depends on the [Vue](https://vuejs.org), [Vuex](https://vuex.vuejs.org), [Vuetify](https://vuetifyjs.com) and [AWS SDK](https://aws.amazon.com/sdk-for-browser) libraries. You should either host these dependencies on your site or load them from a third-party CDN.
+
+The HTML code below is an illustration of directly loading the chatbot UI library and its dependencies.
+
+**NOTE**: The versions of the links below may need to be pointed to the latest supported versions.
+
+  - Copy [`aws-lex-web-ui`](../source/aws-lex-web-ui) folder to project.
+  - Just add following [markup](../source/aws-lex-web-ui/template.html) to any page or add new html file with this content:
+  ```
+  <html>
+    <head>
+      <!-- Font Dependencies -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet" type="text/css">
+
+      <!-- Vuetify CSS Dependencies -->
+      <link href="https://unpkg.com/vuetify@0.16.9/dist/vuetify.min.css" rel="stylesheet" type="text/css">
+
+      <!-- LexWebUi CSS from dist directory -->
+      <link href="./lex-web-ui.css" rel="stylesheet" type="text/css">
+      <!-- page specific LexWebUi styling -->
+      <style type="text/css">
+        #lex-web-ui-app { display: flex; height: 100%; width: 100%; }
+        body, html { overflow-y: auto; overflow-x: hidden; }
+      </style>
+    </head>
+    <body>
+      <!-- application will be dynamically mounted here -->
+      <div id="lex-web-ui"></div>
+
+      <!--
+        Vue, Vuex, Vuetifiy and AWS SDK dependencies must be loaded before lex-web-ui.js.
+        Loading from third party CDN for quick testing
+      -->
+      <script src="https://unpkg.com/vue@2.5.3"></script>
+      <script src="https://unpkg.com/vuex@3.0.1"></script>
+      <script src="https://unpkg.com/vuetify@0.16.9"></script>    
+      <script src="https://sdk.amazonaws.com/js/aws-sdk-2.661.0.min.js"></script>
+
+      <!-- LexWebUi Library from dist directory -->
+      <script src="./lex-web-ui.js"></script>
+
+      <!-- instantiate the web ui with a basic config -->
+      <script>
+        // LexWebUi supports numerous configuration options. Here
+        // is an example using just a couple of the required options.
+        var config = {
+          region: 'ap-southeast-2',
+          cognito: {
+            // Your Cognito Pool Id - this is required to provide AWS credentials
+            poolId: 'ap-southeast-2:XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+          },
+          lex: {
+            // Lex Bot Name in your account
+            botName: 'OrderFlowers',
+            initialText: ''  //Initial Message
+          },
+          recorder: {
+            enable: true
+          }          
+        };
+        console.log(config);
+        // load the LexWebUi component
+        var lexWebUi = new LexWebUi.Loader(config);
+        // instantiate Vue
+        new Vue({
+          el: '#lex-web-ui',
+          store: lexWebUi.store,
+          template: '<div id="lex-web-ui-app"><lex-web-ui/></div>',
+        });
+      </script>
+    </body>
+  </html>
+  ```
+  Change the `botName`, `region`, `poolId`, JavaScript and CSS file path.
+  
+  For more information, please refer to [Sample Amazon Lex Web Interface](https://github.com/aws-samples/aws-lex-web-ui).
