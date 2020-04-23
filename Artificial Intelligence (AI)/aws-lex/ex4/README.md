@@ -2,7 +2,7 @@
 
 You have built and tested your bots in the previous exercises. It is time for you to push this out to a static website, but you want to ensure it's not left wide open. You know Amazon Cognito will let you manage permissions and users for mobile and web apps, so you start with an Amazon Cognito federated identity pool.
 
-**Set up Amazon Cognito**
+## Set up Amazon Cognito
 1. Sign in to the AWS Management Console and open the AWS Cognito console at [https://console.aws.amazon.com/cognito/](https://console.aws.amazon.com/cognito/).
 
 1. Choose **Manage Identity Pool** for your first setup; otherwise, on the **Federated Identities** page, choose **Create new identity pool**.
@@ -30,9 +30,9 @@ You have built and tested your bots in the previous exercises. It is time for yo
 
 1. Access right granted for **Cognito_botpoolUnauth_Role**; repeat above steps to grant access for **Cognito_botpoolAuth_Role**.
 ![](../images/greetings_visitor_6d.gif)  
-
-
-**Test your Chatbot by Static HTML Page**  
+  
+  
+## Test your Chatbot by Static HTML Page  
   - Download the [HTML file](../source/aws-lex-template.html) and run it in your browser.
   - Change the values of `region`, `IdentityPoolId`, `botName` and placeholder of `wisdom`
 
@@ -201,9 +201,9 @@ You have built and tested your bots in the previous exercises. It is time for yo
 You can upload and host the [Static HTML Page](../source/aws-lex-template.html) on your web server to test your chatbot in the public. This page supports the **Plain Text** bot only. You can embed your own UI and UX design to the static page for decoration.  
   
 ![](../images/ex4-step1.png)
-
-
-**Test your Chatbot by Webapp**
+  
+  
+## Test your Chatbot by Webapp  
   - Copy [`aws-lex-bot-wizard`](../source/aws-lex-bot-wizard) folder to project.
   - Just add following [markup](../source/aws-lex-bot-wizard/widget.html) to any page or add new html file with this content:
   ```
@@ -224,9 +224,9 @@ You can upload and host the [Static HTML Page](../source/aws-lex-template.html) 
   This webapp supports the **Response Card** feature.
   
 ![](../images/ex4-step2.png)
-
   
-**Test your Chatbot by Web UI Component**  
+  
+## Test your Chatbot by Web UI Component  
 Directly loading the chatbot UI component works at a lower level than using the loader library as described above. This approach can be used if you want to manually control the rendering, configuration and dependency loading process.
 
 The entry point to the chatbot UI component is the `lex-web-ui.js` JavaScript file. The UI CSS styles are contained in the `lex-web-ui.css` file. The component depends on the [Vue](https://vuejs.org), [Vuex](https://vuex.vuejs.org), [Vuetify](https://vuetifyjs.com) and [AWS SDK](https://aws.amazon.com/sdk-for-browser) libraries. You should either host these dependencies on your site or load them from a third-party CDN.
