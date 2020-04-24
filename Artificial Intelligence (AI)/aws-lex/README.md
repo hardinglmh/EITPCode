@@ -30,3 +30,8 @@ For more information about Amazon Lex, please feel free to visit the following l
 https://aws.amazon.com/lex/  
 https://aws.amazon.com/lex/faqs/  
 https://docs.aws.amazon.com/lex/
+
+### License Summary
+The documentation is made available under the Creative Commons Attribution-ShareAlike 4.0 International License. See the [LICENSE](LICENSE) file.
+
+The sample code within this documentation is made available under a modified MIT license. See the [LICENSE-SAMPLECODE](LICENSE-SAMPLECODE) file.
