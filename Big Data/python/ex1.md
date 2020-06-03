@@ -14,7 +14,7 @@ Mac OS X 10.8 comes with Python 2.7 pre-installed by Apple. If you wish, you are
 1. Choose the latest Python release (e.g. Latest Python 3 Release - Python 3.8.3) and click Download [macOS 64-bit installer] (https://www.python.org/ftp/python/3.8.3/python-3.8.3-macosx10.9.pkg).
 1. Execute the installer until below screen shown.
 1. Installation completed. Press Command + Space, type terminal.app to open the text-based terminal.
-l. Type python --version to see the installed version of Python on your Mac OS.
+1. Type python --version to see the installed version of Python on your Mac OS.
 
 
 ## Environment Setup for Python on Windows
