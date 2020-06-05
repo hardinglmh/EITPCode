@@ -8,7 +8,7 @@ This toolkit contains sample programs based on Python, including scraping, data 
 Below examples are designed for students to get familiar with Python, simply sign into the [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb). You must have an Google account to start using Google Colab.
 
 ### Examples
-### [1 : Environment Setup for Python](./ex1/README.md)
+### [1 : Environment Setup for Python](ex1.md)
 
 
 ### Reference  
