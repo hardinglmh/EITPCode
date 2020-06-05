@@ -12,9 +12,12 @@ Mac OS X 10.8 comes with Python 2.7 pre-installed by Apple. If you wish, you are
 
 1. Go to [Python website](https://www.python.org/downloads/mac-osx/).
 1. Choose the latest Python release (e.g. Latest Python 3 Release - Python 3.8.3) and click Download [macOS 64-bit installer](https://www.python.org/ftp/python/3.8.3/python-3.8.3-macosx10.9.pkg).
-1. Execute the installer until below screen shown.
+1. Execute the installer.
+![](../images/ex1-ios-01.png)
+![](../images/ex1-ios-02.png)
+![](../images/ex1-ios-03.png)
 1. Installation completed. Press Command + Space, type terminal.app to open the text-based terminal.
-1. Type python --version to see the installed version of Python on your Mac OS.
+1. Type ```python --version``` to see the installed version of Python on your Mac OS.
 
 
 ## Environment Setup for Python on Windows
@@ -26,7 +29,14 @@ Python release only supports a Windows platform while Microsoft considers the pl
 1. Choose the latest Python release (e.g. Latest Python 3 Release - Python 3.8.3), click Download [Windows x86-64 executable installer](https://www.python.org/ftp/python/3.8.3/python-3.8.3-amd64.exe) for 64-bit Windows, or [Windows x86 executable installer](https://www.python.org/ftp/python/3.8.3/python-3.8.3.exe) for 32-bit Windows.
 1. Execute the installer.
 1. Choose Add Python 3.8 to PATH and click Install Now.
-1. Installation completed. Go to Start Menu, choose Folder Python 3.8, click IDLE (Python 3.8 64-bit) to open text-based terminal and start development.
+![](../images/ex1-win-01.png)
+1. Customize installation will provide some options for installation.
+![](../images/ex1-win-02.png)
+![](../images/ex1-win-03.png)
+1. Installation completed.
+![](../images/ex1-win-04.png)
+![](../images/ex1-win-05.png)
+1. Go to Command Prompt, Type ```python --version``` to see the installed version of Python on your Windows OS.
 
 
 ## Environment Setup for Python on Google Colab
