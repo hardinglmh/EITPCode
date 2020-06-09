@@ -56,5 +56,5 @@ The Python development team has declared that Python 2 will no longer be support
 ![](./images/ex1-colab-04.png)
 1. Click Edit > Notebook settings or Runtime > Change runtime type on the top menu. 
 ![](./images/ex1-colab-05.png)
-l. Select GPU as Hardware accelerator.
+1. Select GPU or TPU as Hardware accelerator.  
 ![](./images/ex1-colab-06.png)
