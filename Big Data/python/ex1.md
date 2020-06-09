@@ -52,7 +52,7 @@ The Python development team has declared that Python 2 will no longer be support
 ![](./images/ex1-colab-02.png)
 1. New tab of new notebook pop up.  
 ![](./images/ex1-colab-03.png)
-1. Rename notebook by means of clicking the file name.  
+1. Rename notebook by means of clicking the file name, the notebook will saved at your [Google Drive](https://drive.google.com/drive/my-drive) automatically.  
 ![](./images/ex1-colab-04.png)
 1. Click Edit > Notebook settings or Runtime > Change runtime type on the top menu. 
 ![](./images/ex1-colab-05.png)
