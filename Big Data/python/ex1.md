@@ -58,3 +58,9 @@ The Python development team has declared that Python 2 will no longer be support
 ![](./images/ex1-colab-05.png)
 1. Select GPU or TPU as Hardware accelerator.  
 ![](./images/ex1-colab-06.png)
+1. Click the right arrow of Connect > Connect to hosted runtime.
+![](./images/ex1-colab-07.png)
+1. After connected, you can start using Google Colab. Mouseover to view the machine configuration.
+![](./images/ex1-colab-08.png)
+1. Type ```print('Hello World')``` in the cell and press Cntl + Enter to compute.
+![](./images/ex1-colab-09.png)
