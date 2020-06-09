@@ -40,11 +40,21 @@ Python release only supports a Windows platform while Microsoft considers the pl
 
 
 ## Environment Setup for Python on Google Colab<a name="colab"></a>
-Colaboratory, or "Colab" for short, allows you to write and execute Python in your browser, with
-+ Zero configuration required
-+ Free access to GPUs
-+ Easy sharing
+Colaboratory, or “Colab” for short, is a product from Google Research. Colab allows anybody to write and execute arbitrary python code through the browser, and is especially well suited to machine learning, data analysis and education. More technically, Colab is a hosted Jupyter notebook service that requires no setup to use, while providing free access to computing resources including GPUs.  
+![](./images/ex1-colab-01.png)
 
-You can improve your Python programming language coding skills, develop deep learning applications using popular libraries such as Keras, TensorFlow, PyTorch, and OpenCV.
+The Python development team has declared that Python 2 will no longer be supported after January 1st, 2020. As of that date, Colab has stopped updating Python 2 runtimes, and will begin phasing out support for Python 2 in the following months.
 
-The most important feature that distinguishes Colab from other free cloud services is; Colab provides GPU and is totally free.
+1. Go to [Google Colab](https://colab.research.google.com).
+1. Sign in with your google account to start using Google Colab by clicking button on top right hand corner.
+1. After sign in, [Welcome To Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) page shown.
+1. Click File > New notebook on the top menu.  
+![](./images/ex1-colab-02.png)
+1. New tab of new notebook pop up.  
+![](./images/ex1-colab-03.png)
+1. Rename notebook by means of clicking the file name.  
+![](./images/ex1-colab-04.png)
+1. Click Edit > Notebook settings or Runtime > Change runtime type on the top menu. 
+![](./images/ex1-colab-05.png)
+l. Select GPU as Hardware accelerator.
+![](./images/ex1-colab-06.png)
